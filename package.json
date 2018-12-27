@@ -1,32 +1,76 @@
 {
   "name": "dkan-ui-components",
-  "version": "0.0.1",
-  "description": "React Components for an Open Data Catalog, used in DKAN's frontend.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+  "version": "0.0.2",
+  "description": "React Components for an Open Data Catalog, used in DKAN's frontend",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmizzell/dkan-ui-components.git"
   },
   "author": "fmizzell <fmizzell.dev@gmail.com>",
   "license": "GPL-3.0",
-  "dependencies": {
-    "bootstrap": "^4.1.3",
-    "excerpts": "0.0.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-intl": "^2.7.2",
-    "react-router-dom": "^4.3.1",
-    "sanitize.css": "^8.0.0",
-    "styled-components": "^4.1.3"
+  "scripts": {
+    "eslint": "eslint src/**/*.js",
+    "lib": "npm run clean && babel src -d lib",
+    "clean": "rm -rf lib && mkdir lib",
+    "prepublish": "npm run lib",
+    "storybook": "start-storybook -p 6006"
   },
+  "keywords": [
+    "react",
+    "react-component"
+  ],
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@storybook/addon-actions": "^4.1.2",
-    "@storybook/addon-links": "^4.1.2",
-    "@storybook/addons": "^4.1.2",
-    "@storybook/react": "^4.1.2",
-    "babel-loader": "^8.0.4"
+    "@case/eslint-config": "^0.3.1",
+    "@storybook/addon-centered": "^3.2.0",
+    "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/addon-options": "^3.2.4",
+    "@storybook/react": "^3.2.4",
+    "babel-cli": "^6.8.0",
+    "babel-core": "^6.10.4",
+    "babel-jest": "^16.0.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.5.2",
+    "chai": "^3.3.0",
+    "chai-spies": "^0.7.1",
+    "css-loader": "^0.24.0",
+    "enzyme": "2.8.2",
+    "event-stream": "^3.3.1",
+    "fbjs": "^0.8.6",
+    "highlight.js": "^9.3.0",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^3.2.0",
+    "i": "^0.3.5",
+    "jsx-loader": "^0.13.2",
+    "mocha": "^2.4.5",
+    "normalize.css": "^4.1.1",
+    "npm": "^5.3.0",
+    "object-assign": "^4.1.0",
+    "react": "^15.3.2",
+    "react-addons-test-utils": "^0.14.0 || ^15.0.0",
+    "react-context": "0.0.3",
+    "react-dom": "^0.14.0 || ^15.0.0",
+    "react-hot-loader": "^1.2.8",
+    "react-mark": "0.0.4",
+    "react-test-renderer": "^15.3.2",
+    "remarkable": "^1.6.0",
+    "require-dir": "^0.3.0",
+    "rimraf": "^2.5.0",
+    "style-loader": "^0.13.0",
+    "testdom": "^2.0.0",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "files": [
+    "lib"
+  ],
+  "eslintConfig": {
+    "extends": "@case",
+    "rules": {
+      "no-magic-numbers": 0
+    }
   }
 }

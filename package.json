@@ -1,15 +1,15 @@
 {
   "name": "dkan-ui-components",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "React Components for an Open Data Catalog, used in DKAN's frontend.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "fmizzell <fmizzell.dev@gmail.com>",
+  "license": "GPL-3.0",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "excerpts": "0.0.3",

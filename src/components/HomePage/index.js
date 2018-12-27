@@ -82,7 +82,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             </span>
 
             <AutoCompSearchList {...AutoCompSearchListProps} />
-
           </StyledSearchContainer>
         </StyledHero>
 

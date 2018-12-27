@@ -7,6 +7,8 @@ import ListItem from '../ListItem';
 import LoadingIndicator from '../LoadingIndicator';
 import HomePageIconListItem from '../HomePageIconListItem';
 
+import '../../global-styles';
+
 function HomePageIconList({ loading, error, loadingHomePageIcons, homePageIcons, facetClick}) {
 
   const computeGrid = (numberOfItems) => {
@@ -20,13 +22,13 @@ function HomePageIconList({ loading, error, loadingHomePageIcons, homePageIcons,
     else if (numberOfItems === 4) {
       number = 3;
     }
-    else if (numberOfItems === 5 || numberOfItems == 6) {
+    else if (numberOfItems === 5 || numberOfItems === 6) {
       number = 2;
     }
     return number;
   }
 
-  const columnWidth = 1; //computeGrid(homePageIcons.length);
+  const columnWidth = computeGrid(homePageIcons.length);
 
   if (loadingHomePageIcons) {
     return <List component={LoadingIndicator} />;
@@ -43,8 +45,10 @@ function HomePageIconList({ loading, error, loadingHomePageIcons, homePageIcons,
   if (homePageIcons !== false) {
     const items = homePageIcons.map(function(item) {
       item.ref = item.identifier;
+      item.title = item.identifier;
       item.columnWidth = columnWidth;
       item.click = facetClick;
+      item.icon = "crown-3";
       return item;
     });
 

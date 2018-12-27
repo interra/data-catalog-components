@@ -19,8 +19,9 @@ const AppWrapper = styled.div`
 
 export default function HomeApp() {
 
-  var homePageIcons = false;
-  return (
+    var homePageIcons = [{"identifier": "ONE"}, {"identifier": "TWO"}, {"identifier": "THREE"}];
+
+    return (
     <AppWrapper>
       <Helmet
         defaultTitle="DKAN"

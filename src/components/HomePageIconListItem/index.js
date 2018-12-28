@@ -10,7 +10,7 @@ class HomePageIconListItem extends React.PureComponent {
 
     // Put together the content of the repository
     const content = (
-      <StyledLink to="search" onClick={ click }>
+      <StyledLink href="/search" onClick={ click }>
         <div data-facet-name={ item.title } className={ `font-icon-select-1 font-icon-select-1-${ item.icon }` } />
         <div data-facet-name={ item.title }>{ item.title }</div>
       </StyledLink>

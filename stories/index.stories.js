@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react';
 
 import HomePageIconListItem from '../src/components/HomePageIconListItem';
 
+import './style.css'
+
 var item = {};
 item.title = "My name is Jhon";
 item.ref = "https://google.com";

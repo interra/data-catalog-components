@@ -1,6 +1,6 @@
 {
   "name": "dkan-ui-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Components for an Open Data Catalog, used in DKAN's frontend",
   "main": "lib/index.js",
   "repository": {

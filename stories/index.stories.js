@@ -2,14 +2,14 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import HomePageIconListItem from '../src/components/HomePageIconListItem';
+import HomePageIconList from '../src/components/HomePageIconList';
 
-import './style.css'
-
-var item = {};
-item.title = "My name is Jhon";
-item.ref = "https://google.com";
-item.columnWidth = 4;
+const items = [
+    { "identifier": "ONE" },
+    { "identifier": "TWO" }
+]
 
 storiesOf('Home', module)
-    .add('ListItem', () => <HomePageIconListItem item={item}/>);
+    .add('List - Loading', () => <HomePageIconList />)
+    .add('List - Error', () => <HomePageIconList state={"error"}/>)
+    .add('List', () => <HomePageIconList state={"ok"} items={items}/>)

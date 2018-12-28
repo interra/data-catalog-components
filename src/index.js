@@ -1,1 +1,1 @@
-export { default as HomePageIconListItem } from './components/HomePageIconListItem'
+export { default as HomePageIconList } from './components/HomePageIconList'

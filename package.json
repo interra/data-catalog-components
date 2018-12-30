@@ -21,6 +21,7 @@
     "react-component"
   ],
   "dependencies": {
+    "excerpts": "0.0.3",
     "prop-types": "^15.6.2",
     "styled-components": "^4.1.3"
   },

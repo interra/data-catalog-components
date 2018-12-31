@@ -7,7 +7,7 @@ import HomePageIconList from '../src/components/HomePageIconList';
 import SearchListItem from '../src/components/SearchListItem';
 import SearchList from '../src/components/SearchList';
 
-var items = [
+var topics = [
     { "identifier": "ONE" },
     { "identifier": "TWO" }
 ]
@@ -15,9 +15,9 @@ var items = [
 storiesOf('Home', module)
     .add('List - Loading', () => <HomePageIconList />)
     .add('List - Error', () => <HomePageIconList state={"error"}/>)
-    .add('List', () => <HomePageIconList state={"ok"} items={items}/>)
+    .add('List', () => <HomePageIconList state={"ok"} items={topics}/>)
 
-items = [
+var items = [
     {
         "identifier": 1234,
         "title": "This is a title",

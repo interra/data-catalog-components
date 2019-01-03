@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Ul from './Ul';
-import Wrapper from './Wrapper';
 
 function List(props) {
     const ComponentToRender = props.component;
@@ -19,17 +18,16 @@ function List(props) {
     }
 
     return (
-        <Wrapper>
-            <Ul>
-                {content}
-            </Ul>
-        </Wrapper>
+        <Ul className={props.className}>
+            {content}
+        </Ul>
     );
 }
 
 List.propTypes = {
     component: PropTypes.func.isRequired,
     items: PropTypes.array,
+    className: PropTypes.string,
 };
 
 export default List;

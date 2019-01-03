@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ResultsList from './ResultsList';
 
 import List from '../List';
 import ListItem from '../ListItem';
 import LoadingIndicator from '../LoadingIndicator';
 import SearchListItem from '../SearchListItem';
-import H3 from './H3';
 
 class SearchList extends Component {
 
@@ -21,15 +21,11 @@ class SearchList extends Component {
         }
         else if (this.props.items.length === 0) {
             return <span>
-              <H3>{this.props.message}</H3>
               <div> No records found, try another search term.</div>
             </span>;
         }
         else {
-            return <span>
-              <H3>{this.props.message}</H3>
-                <List items={this.props.items} component={SearchListItem} />
-              </span>;
+            return <ResultsList items={this.props.items} className="search-list" component={SearchListItem} />
 
         }
     }

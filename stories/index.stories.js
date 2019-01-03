@@ -8,7 +8,7 @@ import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
 
 import { ThemeProvider } from 'styled-components'
-import pqdcTheme from '../src/theme/default'
+import defaultTheme from '../src/theme/default'
 import '../src/theme/styles.css'
 
 var topics = [
@@ -37,7 +37,7 @@ var topics = [
 storiesOf('Home', module)
     .add('Topics List - Loading', () => <HomePageIconList />)
     .add('Topics List - Error', () => <HomePageIconList state={"error"}/>)
-    .add('Topics List', () => <ThemeProvider theme={pqdcTheme}><HomePageIconList state={"ok"} items={topics} /></ThemeProvider>)
+    .add('Topics List', () => <ThemeProvider theme={defaultTheme}><HomePageIconList state={"ok"} items={topics} /></ThemeProvider>)
 
 var themes = [
     {
@@ -87,4 +87,4 @@ storiesOf('Search', module)
     .add('List - Loading', () => <SearchList />)
     .add('List - Error', () => <SearchList state={"error"}/>)
     .add('List - Empty', () => <SearchList state={"ok"} />)
-    .add('List', () => <ThemeProvider theme = { pqdcTheme }><SearchList state={"ok"} items={items} /></ThemeProvider>)
+    .add('List', () => <ThemeProvider theme = { defaultTheme }><SearchList state={"ok"} items={items} /></ThemeProvider>)

@@ -1,11 +1,11 @@
 {
-  "name": "dkan-ui-components",
+  "name": "data-catalog-components",
   "version": "0.0.6",
   "description": "React Components for an Open Data Catalog, used in DKAN's frontend",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmizzell/dkan-ui-components.git"
+    "url": "git+https://github.com/interra/data-catalog-components.git"
   },
   "author": "fmizzell <fmizzell.dev@gmail.com>",
   "license": "GPL-3.0",

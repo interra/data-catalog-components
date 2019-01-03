@@ -1,4 +1,4 @@
-const pqdcTheme = {
+const defaultTheme = {
   backgroundColor: '#f9fafb',
   borderColor: '#A4B9C6',
   primaryDark: '#003366',   // blueDark.
@@ -16,4 +16,4 @@ const pqdcTheme = {
   linkColor: '#003366',
 }
 
-export default pqdcTheme;
+export default defaultTheme;

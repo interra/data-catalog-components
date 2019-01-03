@@ -8,7 +8,7 @@ import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
 
 import { ThemeProvider } from 'styled-components'
-import pqdcTheme from '../src/theme/pqdc'
+import pqdcTheme from '../src/theme/default'
 import '../src/theme/styles.css'
 
 var topics = [

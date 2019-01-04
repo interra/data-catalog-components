@@ -1,7 +1,7 @@
 {
-  "name": "data-catalog-components",
-  "version": "0.0.6",
-  "description": "React Components for an Open Data Catalog, used in DKAN's frontend",
+  "name": "interra-data-catalog-components",
+  "version": "0.0.1",
+  "description": "React Components for Open Data Catalogs.",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

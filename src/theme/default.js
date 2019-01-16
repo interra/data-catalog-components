@@ -13,7 +13,12 @@ const defaultTheme = {
   accentMedium: '#f2d13c', // yellowMedium.
   accentLight: '#fff8e4',  // yellowLight.
   headerColor: '#003366',
+  textColor: '#3B3B3B',
   linkColor: '#003366',
+  fontFamily: '"Rubik", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;',
+  footerColor: '#004466',
+  footerText: '#FFFFFF',
+  footerLink: '#FFFFFF'
 }
 
 export default defaultTheme;

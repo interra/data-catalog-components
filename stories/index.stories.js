@@ -7,9 +7,14 @@ import HomePageIconList from '../src/components/HomePageIconList';
 import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
 
+import OrgBlock from '../src/components/OrgBlock';
+import Hero from '../src/components/Hero';
+import Footer from '../src/components/Footer';
+import FooterCustom from '../src/components/Footer/FooterCustom';
+
 import { ThemeProvider } from 'styled-components'
 import defaultTheme from '../src/theme/default'
-import '../src/theme/styles.css'
+import '../src/theme/styles.scss'
 
 var topics = [
     {
@@ -38,6 +43,10 @@ storiesOf('Home', module)
     .add('Topics List - Loading', () => <HomePageIconList />)
     .add('Topics List - Error', () => <HomePageIconList state={"error"}/>)
     .add('Topics List', () => <ThemeProvider theme={defaultTheme}><HomePageIconList state={"ok"} items={topics} /></ThemeProvider>)
+
+    .add('Hero - Loading', () => <OrgBlock />)
+    .add('Hero - Error', () => <OrgBlock state={"error"}/>)
+    .add('Hero', () => <ThemeProvider theme={defaultTheme}><Hero state={"ok"} /></ThemeProvider>)
 
 var themes = [
     {
@@ -88,3 +97,22 @@ storiesOf('Search', module)
     .add('List - Error', () => <SearchList state={"error"}/>)
     .add('List - Empty', () => <SearchList state={"ok"} />)
     .add('List', () => <ThemeProvider theme = { defaultTheme }><SearchList state={"ok"} items={items} /></ThemeProvider>)
+
+var publisher = [
+    {
+       "identifier": "1234",
+       "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/json.svg",
+       "title": "I am the Org",
+       "description": "That is all there is to say"
+    }
+]
+
+storiesOf('Organization', module)
+    .add('Org Block - Loading', () => <OrgBlock />)
+    .add('Org Block - Error', () => <OrgBlock state={"error"}/>)
+    .add('Org Block', () => <ThemeProvider theme={defaultTheme}><OrgBlock state={"ok"} /></ThemeProvider>)
+
+storiesOf('Footer', module)
+    .add('Footer', () => <ThemeProvider theme={defaultTheme}><Footer state={"ok"} /></ThemeProvider>)
+    .add('Footer Custom', () => <ThemeProvider theme={defaultTheme}><FooterCustom state={"ok"} /></ThemeProvider>)
+

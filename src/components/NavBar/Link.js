@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-const navBarLink = "#eaeaea";
-const navBarLinkHover = "#FFF";
-const navBarLinkHoverBack = "#3a71af";
-const navBarLinkActive = "#FFF";
-const navBarLinkActiveBack = "#305e92";
-const navBarLinkActiveHoverBack = "#3a71af";
-const navBarLinkActiveHover = "#FFF";
-
 export default styled.a`
   display: inline-flex;
   padding: .9em 1.2em;
@@ -18,24 +10,26 @@ export default styled.a`
   cursor: pointer;
   outline: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: ${navBarLink};
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: ${props => props.theme.navBarLink};
   transition: all 0.2s linear;
 
-  &:hover.active {
-    background-color: none !important;
-    box-shadow: inset 0 -4px 0 ${navBarLinkActiveHoverBack};
-    color: ${navBarLink};
-  }
   &:hover {
-    color: ${navBarLinkHover};
+    color: ${props => props.theme.navBarLinkHover};
     text-decoration: none;
-    background-color: ${navBarLinkHoverBack};
+    background-color: ${props => props.theme.navBarLinkHoverBack};
   }
   &.active {
     background-color: none !important;
-    box-shadow: inset 0 -4px 0 ${navBarLinkActiveHoverBack};
+    box-shadow: inset 0 -4px 0 ${props => props.theme.navBarLinkActiveHoverBack};
     text-decoration: none;
-    color: ${navBarLink};
+    color: ${props => props.theme.navBarLink};
+  }
+  &:hover.active,
+  &:focus.active {
+    background-color: none !important;
+    box-shadow: inset 0 -4px 0 ${props => props.theme.navBarLinkActiveHoverBack};
+    color: ${props => props.theme.navBarLink};
   }
 `;

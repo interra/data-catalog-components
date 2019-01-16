@@ -21,8 +21,8 @@ import '../src/theme/styles.scss'
 
 storiesOf('General', module)
     .add('Logo', () => <Logo/>)
-    .add('Header', () => <Header/>)
-    .add('NavBar', () => <NavBar />)
+    .add('Header', () => <ThemeProvider theme={defaultTheme}><Header/></ThemeProvider>)
+    .add('NavBar', () => <ThemeProvider theme={defaultTheme}><NavBar /></ThemeProvider>)
 
 
 var topics = [

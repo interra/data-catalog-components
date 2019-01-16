@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   border-radius: 4px;
   padding: 16px 48px;
   a {
-    color: ${props => props.theme.headerColor};
+    color: ${props => props.theme.headingColor};
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     line-height: 1.6rem;
     white-space: nowrap;
     display: inline-block;
-    padding: 3px 8px 5px;
+    padding: 5px 8px;
     margin: .75em 16px .75em 0;
     &:first-of-type {
       margin-left: 0;

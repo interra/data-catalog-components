@@ -12,11 +12,22 @@ const defaultTheme = {
   accentDark: '#dfb100',   // yellowDark.
   accentMedium: '#f2d13c', // yellowMedium.
   accentLight: '#fff8e4',  // yellowLight.
-  headerColor: '#003366',
+  headingColor: '#003366',
   textColor: '#3B3B3B',
   linkColor: '#003366',
   fontFamily: '"Rubik", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;',
-  footerColor: '#004466',
+  navBarBackgroundColor: "#007BBC",
+  navBarBackgroundImage: "linear-gradient(to right, #007BBC 0%, #133F75 100%)",
+  navBarLink: "#eaeaea",
+  navBarLinkActive: "#FFFFFF",
+  navBarLinkHoverBack: "#002245",
+  navBarLinkActiveBack: "#305e92",
+  navBarLinkActiveHoverBack: "#f2d13c",
+  navBarLinkActiveHover: "#FFFFFF",
+  heroBackgroundColor: "#0A77BD",
+  heroTextColor: "#FFFFFF",
+  heroHeadingColor: "#FFFFFF",
+  footerBackgroundColor: '#004466',
   footerText: '#FFFFFF',
   footerLink: '#FFFFFF'
 }

@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.footerColor};
+  background-color: ${props => props.theme.footerBackgroundColor};
   color: ${props => props.theme.footerText};
   padding: 40px 0;
-  display: flex;
-  align-items: flex-start;
-  align-content: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  .container {
+    display: flex;
+    align-items: flex-start;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 
   a {
     color: ${props => props.theme.footerLink};

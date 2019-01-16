@@ -8,9 +8,18 @@ import Wrapper from './Wrapper';
 class Header extends Component {
 
     render() {
-        return <div><Wrapper><Logo/><SiteName/></Wrapper><NavBar/></div>
-    }
+      return (
+        <Wrapper>
+          <div className="container">
+            <div className="branding">
+              <Logo/><SiteName/>
+            </div>
+          </div>
+          <NavBar/>
 
+        </Wrapper>
+      );
+    }
 }
 
 export default Header;

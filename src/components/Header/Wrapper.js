@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: flex-end;
-  align-content: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  .branding {
+    display: flex;
+    align-items: flex-end;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 
   .site-name {
     margin-bottom: 10px;

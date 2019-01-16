@@ -8,7 +8,6 @@ export default styled.div`
   position:relative;
   display: block;
   clear: both;
-  padding-left: 50px;
   z-index: 1;
   &:after{
     content: "";

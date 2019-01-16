@@ -13,14 +13,18 @@ class NavBar extends Component {
                 return 'active';
             }
         }
-        return <Wrapper className="navbar">
-            <Link className="{activeClass('/')}" href="/">
-                Home
-            </Link>
-            <Link className={activeClass('/search')} href="/search">
-                Search
-            </Link>
-        </Wrapper>
+        return (
+          <Wrapper className="navbar">
+            <div className="container">
+              <Link className="{activeClass('/')}" href="/">
+                  Home
+              </Link>
+              <Link className={activeClass('/search')} href="/search">
+                  Search
+              </Link>
+            </div>
+          </Wrapper>
+        );
     }
 
 }

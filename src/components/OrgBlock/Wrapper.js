@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
   strong {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
   }
 `;

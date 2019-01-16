@@ -9,15 +9,19 @@ import SearchListItem from '../src/components/SearchListItem';
 
 import OrgBlock from '../src/components/OrgBlock';
 import Hero from '../src/components/Hero';
+import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import FooterCustom from '../src/components/Footer/FooterCustom';
 import NavBar from '../src/components/NavBar';
+import Logo from '../src/components/Logo';
 
 import { ThemeProvider } from 'styled-components'
 import defaultTheme from '../src/theme/default'
 import '../src/theme/styles.scss'
 
 storiesOf('General', module)
+    .add('Logo', () => <Logo/>)
+    .add('Header', () => <Header/>)
     .add('NavBar', () => <NavBar />)
 
 

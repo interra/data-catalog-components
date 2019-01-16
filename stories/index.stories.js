@@ -11,10 +11,15 @@ import OrgBlock from '../src/components/OrgBlock';
 import Hero from '../src/components/Hero';
 import Footer from '../src/components/Footer';
 import FooterCustom from '../src/components/Footer/FooterCustom';
+import NavBar from '../src/components/NavBar';
 
 import { ThemeProvider } from 'styled-components'
 import defaultTheme from '../src/theme/default'
 import '../src/theme/styles.scss'
+
+storiesOf('General', module)
+    .add('NavBar', () => <NavBar />)
+
 
 var topics = [
     {

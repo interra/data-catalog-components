@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 const Branding = styled.div`
   flex-grow: 1.5;
+  max-width: 560px;
   h3 {
     font-weight: 500;
     font-size: 30px;
-    margin: 20px 0 10px;
+    margin: 20px 0 5px;
   }
   img {
     width: 90px;
@@ -14,7 +15,7 @@ const Branding = styled.div`
     opacity: .3;
   }
   p {
-    margin: 0 0 1em 0;
+    margin: 0 2em 1em 0;
   }
   .social {
     margin: 0 0 1em 110px;

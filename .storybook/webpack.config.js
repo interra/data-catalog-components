@@ -5,12 +5,27 @@ module.exports = (storybookBaseConfig, configType) => {
   // configType has a value of 'DEVELOPMENT' or 'PRODUCTION'
 
   // add our custom loaders
-  storybookBaseConfig.module.rules.push({
-    test: /\.scss$/,
-    loaders: ["style-loader", "css-loader", "sass-loader"],
-    exclude: /node_modules/,
-    include: path.resolve(__dirname, "../src")
-  });
+  storybookBaseConfig.module.rules.push(
+    {
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'style-loader',
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        },
+      ],
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      include: path.resolve(__dirname, "../src"),
+      use: 'url-loader'
+    }
+  );
 
   return storybookBaseConfig;
 };

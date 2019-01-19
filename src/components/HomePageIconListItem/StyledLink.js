@@ -4,7 +4,7 @@ const StyledLink = styled.a`
   border: 1px solid ${props => props.theme.borderColor};
   border-radius: 8px;
   margin-bottom: 20px;
-  min-width: 180px;
+  width: 210px;
   box-shadow: 0 0 4px 2px #f3f3f3;
   background-color: white;
   position: relative;
@@ -25,6 +25,7 @@ const StyledLink = styled.a`
   img {
     max-width: 150px;
     max-height: 100px;
+    margin-bottom: 10px;
   }
 `
 

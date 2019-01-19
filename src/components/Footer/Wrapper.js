@@ -10,11 +10,16 @@ const Wrapper = styled.div`
     align-content: stretch;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   a {
     color: ${props => props.theme.footerLink};
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: ${props => props.theme.footerLinkHover};
+    }
   }
   ul {
     list-style-type:none;
@@ -25,7 +30,12 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
+    .container {
+      flex-wrap: wrap;
+    }
+    .copyright {
+      margin-top: 30px;
+    }
   }
 `;
 

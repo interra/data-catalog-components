@@ -14,8 +14,8 @@ class NavBar extends Component {
             }
         }
         return (
-          <Wrapper className="navbar">
-            <div className="container">
+          <Wrapper className="main-navigation">
+            <div className="container-fluid">
               <Link className="{activeClass('/')}" href="/">
                   Home
               </Link>

@@ -14,48 +14,45 @@ import Footer from '../src/components/Footer';
 import FooterCustom from '../src/components/Footer/FooterCustom';
 import NavBar from '../src/components/NavBar';
 import Logo from '../src/components/Logo';
-
-import { ThemeProvider } from 'styled-components'
-import defaultTheme from '../src/theme/default'
-import '../src/theme/styles.scss'
+import StyledButton from '../src/components/Button';
 
 storiesOf('General', module)
-    .add('Logo', () => <Logo/>)
-    .add('Header', () => <ThemeProvider theme={defaultTheme}><Header/></ThemeProvider>)
-    .add('NavBar', () => <ThemeProvider theme={defaultTheme}><NavBar /></ThemeProvider>)
+    .add('Logo', () => <Logo />)
+    .add('Header', () => <Header/>)
+    .add('NavBar', () => <NavBar />)
+    .add('Button', () => <StyledButton color="primary">primary</StyledButton>)
+    .add('Preview Button', () => <StyledButton color="primary"><i class="fa fa-bar-chart"></i> preview</StyledButton>)
+    .add('Download Button', () => <StyledButton color="primary"><i class="fa fa-download"></i> download</StyledButton>)
+    .add('Hero Button', () => <StyledButton className="btn-hero" onClick="">Learn More</StyledButton>)
 
+    .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
 
 var topics = [
     {
-        "identifier": "ONE",
+        "identifier": "Morbi congue ",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/json.svg",
         "alt": "airplane"
     },
     {
-        "identifier": "TWO",
+        "identifier": "Suspendisse commodo",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/openweb.svg",
         "alt": "backpack"
     },
     {
-        "identifier": "THREE",
+        "identifier": "Maecenas mauris",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/compass.svg",
         "alt": "balloon"
     },
     {
-        "identifier": "FOUR",
+        "identifier": "Praesent sollicitudin",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/odf.svg",
         "alt": "clock"
     }
 ]
 
 storiesOf('Home', module)
-    .add('Topics List - Loading', () => <HomePageIconList />)
-    .add('Topics List - Error', () => <HomePageIconList state={"error"}/>)
-    .add('Topics List', () => <ThemeProvider theme={defaultTheme}><HomePageIconList state={"ok"} items={topics} /></ThemeProvider>)
-
-    .add('Hero - Loading', () => <OrgBlock />)
-    .add('Hero - Error', () => <OrgBlock state={"error"}/>)
-    .add('Hero', () => <ThemeProvider theme={defaultTheme}><Hero state={"ok"} /></ThemeProvider>)
+    .add('Topics List', () => <HomePageIconList items={topics} />)
+    .add('Hero', () => <Hero />)
 
 var themes = [
     {
@@ -102,26 +99,13 @@ var items = [
 
 storiesOf('Search', module)
     .add('Item', () => <SearchListItem />)
-    .add('List - Loading', () => <SearchList />)
-    .add('List - Error', () => <SearchList state={"error"}/>)
-    .add('List - Empty', () => <SearchList state={"ok"} />)
-    .add('List', () => <ThemeProvider theme = { defaultTheme }><SearchList state={"ok"} items={items} /></ThemeProvider>)
+    .add('List', () => <SearchList items={items} />)
 
-var publisher = [
-    {
-       "identifier": "1234",
-       "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/json.svg",
-       "title": "I am the Org",
-       "description": "That is all there is to say"
-    }
-]
 
 storiesOf('Organization', module)
-    .add('Org Block - Loading', () => <OrgBlock />)
-    .add('Org Block - Error', () => <OrgBlock state={"error"}/>)
-    .add('Org Block', () => <ThemeProvider theme={defaultTheme}><OrgBlock state={"ok"} /></ThemeProvider>)
+    .add('Org Block', () => <OrgBlock />)
 
 storiesOf('Footer', module)
-    .add('Footer', () => <ThemeProvider theme={defaultTheme}><Footer state={"ok"} /></ThemeProvider>)
-    .add('Footer Custom', () => <ThemeProvider theme={defaultTheme}><FooterCustom state={"ok"} /></ThemeProvider>)
+    .add('Footer', () => <Footer />)
+    .add('Footer Custom', () => <FooterCustom />)
 

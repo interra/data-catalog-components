@@ -6,7 +6,7 @@ class Copyright extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="copyright">
           {this.props.copyright} <a href={this.props.link}>{this.props.clickable}</a>
       </div>
     );

@@ -6,9 +6,11 @@ class Logo extends Component {
   const
 
     render() {
-        return <Wrapper href="/" className="logo">
+        return (
+          <Wrapper href="/" className="logo">
             <img src={this.props.image} alt="Logo" />
-        </Wrapper>
+          </Wrapper>
+        );
     }
 
 }

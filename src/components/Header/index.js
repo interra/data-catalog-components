@@ -10,7 +10,7 @@ class Header extends Component {
     render() {
       return (
         <Wrapper>
-          <div className="container">
+          <div className="container-fluid">
             <div className="branding">
               <Logo/><SiteName/>
             </div>

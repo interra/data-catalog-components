@@ -9,7 +9,7 @@ class Footer extends React.Component {
 
     return (
       <Wrapper className="page-footer">
-        <div className="container">
+        <div className="container-fluid">
           <Copyright />
         </div>
       </Wrapper>

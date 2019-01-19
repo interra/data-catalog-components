@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
+import StyledButton from '../Button';
 
 class Hero extends React.Component {
 
@@ -14,7 +15,7 @@ class Hero extends React.Component {
         <div className={'block ' + Align}>
           <h1 className="hero-title">{this.props.title}{this.props.title2}</h1>
           <p>{this.props.intro}</p>
-          <a href="/about" role="button" className="btn btn-hero">Learn more</a>
+          <StyledButton href="/about" className="btn-hero">Learn more</StyledButton>
         </div>
       </Wrapper>
     );

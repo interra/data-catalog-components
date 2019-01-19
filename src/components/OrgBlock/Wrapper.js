@@ -12,11 +12,14 @@ const Wrapper = styled.div`
   }
   a {
     text-decoration:none;
-    color: ${props => props.theme.linkColor}
+    color: ${props => props.theme.linkColor};
+    &:hover {
+      color: ${props => props.theme.linkHoverColor};
+    }
   }
   strong {
     display: block;
-    font-size: 1.8rem;
+
     margin-bottom: 1rem;
   }
 `;

@@ -17,8 +17,7 @@ class FooterCustom extends React.Component {
             <img src={this.props.footerlogo} alt="Medicare" />
             <h3>Medicare.org</h3>
             <p>
-              A federal government website managed and paid for by the <br />
-              <a href="https://www.cms.gov/">U.S Centers for Medicare & Medicaid Services</a>
+              A federal government website managed and paid for by the <a href="https://www.cms.gov/">U.S Centers for Medicare & Medicaid Services</a>
             </p>
             <div className="social">
               <i className="fa fa-youtube-play" aria-hidden="true" />

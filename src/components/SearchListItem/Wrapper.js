@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     color: ${props => props.theme.headingColor};
     text-decoration: none;
     &:hover {
+      color: ${props => props.theme.headingColor};
       text-decoration: underline;
     }
   }
@@ -18,7 +19,6 @@ const Wrapper = styled.div`
   .item-theme {
     border-bottom: 1px solid ${props => props.theme.grayLight};
     color: ${props => props.theme.grayMedium};
-    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
@@ -38,12 +38,12 @@ const Wrapper = styled.div`
   .label {
     border-radius: 3px;
     color: white;
-    font-weight: bold;
-    font-size: 1.4rem;
+    font-size: .85rem;
+    font-weight: 500;
     line-height: 1.6rem;
     white-space: nowrap;
     display: inline-block;
-    padding: 5px 8px;
+    padding: 0 8px;
     margin: .75em 16px .75em 0;
     &:first-of-type {
       margin-left: 0;

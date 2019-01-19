@@ -10,13 +10,12 @@ export default styled.a`
   cursor: pointer;
   outline: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
   font-weight: 500;
   color: ${props => props.theme.navBarLink};
   transition: all 0.2s linear;
 
   &:hover {
-    color: ${props => props.theme.navBarLinkHover};
+    color: ${props => props.theme.navBarLink};
     text-decoration: none;
     background-color: ${props => props.theme.navBarLinkHoverBack};
   }

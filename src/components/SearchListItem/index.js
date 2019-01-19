@@ -12,7 +12,7 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
     }
     else {
       let i = 0;
-      return distributions.map(function(dist) {
+      return distributions.map((dist) => {
         i++
         const format = dist.format === undefined ? '' : dist.format.toLowerCase();
         return <div title={`format: ${dist.format}`}
@@ -52,7 +52,7 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
 
     // Put together the content of the repository
     const content = (
-      <Wrapper className="search-list-item">
+      <Wrapper key={`wrapper-${item.identifier}`} className="search-list-item">
         <a href={"/dataset/" + item.identifier}>
           <h2>{ item.title }</h2>
         </a>
@@ -71,21 +71,20 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
       </Wrapper>
     );
 
-    // Render the content into a list item
     return (
-        <ListItem key={`repo-list-item-${item.identifier}`} item={content} />
+      <ListItem key={`repo-list-item-${item.identifier}`} item={content} />
     );
   }
 }
 
 SearchListItem.defaultProps = {
-    item: {
-      "identifier": 1234,
-      "title": "This is a title",
-      "description": "I am an item",
-      "modified": "1/12/2018",
-      "publisher": "Publish Inc."
-    },
+  item: {
+    "identifier": 1234,
+    "title": "This is a title",
+    "description": "I am an item",
+    "modified": "1/12/2018",
+    "publisher": "Publish Inc."
+  },
 };
 
 SearchListItem.propTypes = {

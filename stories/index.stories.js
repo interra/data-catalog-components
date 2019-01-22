@@ -15,6 +15,10 @@ import FooterCustom from '../src/components/Footer/FooterCustom';
 import NavBar from '../src/components/NavBar';
 import Logo from '../src/components/Logo';
 import StyledButton from '../src/components/Button';
+import Pagination from '../src/components/Pagination';
+import Blocks from '../src/components/Blocks';
+import StepsBlock from '../src/components/Blocks/StepsBlock';
+import StatBlock from '../src/components/Blocks/StatBlock';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
@@ -24,7 +28,6 @@ storiesOf('General', module)
     .add('Preview Button', () => <StyledButton color="primary"><i class="fa fa-bar-chart"></i> preview</StyledButton>)
     .add('Download Button', () => <StyledButton color="primary"><i class="fa fa-download"></i> download</StyledButton>)
     .add('Hero Button', () => <StyledButton className="btn-hero" onClick="">Learn More</StyledButton>)
-
     .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
 
 var topics = [
@@ -34,7 +37,7 @@ var topics = [
         "alt": "airplane"
     },
     {
-        "identifier": "Suspendisse commodo",
+        "identifier": "Suspendisse",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/openweb.svg",
         "alt": "backpack"
     },
@@ -50,9 +53,53 @@ var topics = [
     }
 ]
 
+var stats = [
+  {
+    "content": "Dataset Downloads",
+    "title": "582k",
+    "icon": "fa fa-download",
+    "ref": "1"
+  },
+  {
+    "content": "API Queries Run",
+    "title": "317k",
+    "icon": "fa fa-refresh",
+    "ref": "2"
+  },
+  {
+    "content": "Total Datasets",
+    "title": "2.63k",
+    "icon": "fa fa-database",
+    "ref": "3"
+  }
+]
+
+var api = [
+  {
+    "title": "Step One",
+    "content": "Lorem ipsum dolor sit amet, laudem persius duo ut. Scripta eruditi est eu, vel iudico putent nonumes ex, vel at graeci labitur. Libris deterruisset mel ut. Est id minim conceptam assueverit. Eum deleniti recusabo voluptatibus no, paulo omittantur te vis.",
+    "step": "1",
+    "ref": "11"
+  },
+  {
+    "title": "Step Two",
+    "content": "Quo illud ridens ea, has voluptatum dissentiet no. Et alii periculis per, eam lorem feugait honestatis ea, at vim nulla ubique iracundia. Nec ne etiam ubique. Novum persius oporteat id pri, ei mea viderer alienum, vix appetere salutandi splendide et.",
+    "step": "2",
+    "ref": "12"
+  },
+  {
+    "title": "Step Three",
+    "content": "Qui eu patrioque dissentiunt. Id consul fabulas assentior qui. His ex eripuit mentitum sensibus, at quo essent concludaturque vituperatoribus. In vim debet equidem theophrastus.",
+    "step": "3",
+    "ref": "13"
+  }
+]
+
 storiesOf('Home', module)
     .add('Topics List', () => <HomePageIconList items={topics} />)
     .add('Hero', () => <Hero />)
+    .add('Stat Blocks', () => <Blocks items={stats} component={StatBlock} />)
+    .add('Step Blocks', () => <Blocks items={api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)
 
 var themes = [
     {
@@ -100,7 +147,7 @@ var items = [
 storiesOf('Search', module)
     .add('Item', () => <SearchListItem />)
     .add('List', () => <SearchList items={items} />)
-
+    .add('Pagination', () => <Pagination />)
 
 storiesOf('Organization', module)
     .add('Org Block', () => <OrgBlock />)

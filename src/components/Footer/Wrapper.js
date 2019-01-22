@@ -12,7 +12,9 @@ const Wrapper = styled.div`
     flex-wrap: nowrap;
     justify-content: space-around;
   }
-
+  h2, h3, h4 {
+    color: ${props => props.theme.footerText};
+  }
   a {
     color: ${props => props.theme.footerLink};
     text-decoration: underline;

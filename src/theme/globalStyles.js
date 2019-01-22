@@ -14,8 +14,9 @@ const GlobalStyles = createGlobalStyle`
     a, input, button, textarea {
       transition: all 0.2s linear;
     }
-
+    h1,h2,h3,h4,h5 { color: ${defaultTheme.headingColor}; }
     h2 { font-size: 1.5rem; } //24px
+    h3 { font-size: 1.25rem; } // 20px
 
     .container-fluid {
       padding-left: 25px;

@@ -19,6 +19,8 @@ import Pagination from '../src/components/Pagination';
 import Blocks from '../src/components/Blocks';
 import StepsBlock from '../src/components/Blocks/StepsBlock';
 import StatBlock from '../src/components/Blocks/StatBlock';
+import Dataset from '../src/components/Dataset';
+import Resource from '../src/components/Resource';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
@@ -155,4 +157,33 @@ storiesOf('Organization', module)
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)
     .add('Footer Custom', () => <FooterCustom />)
+
+
+let dataset = JSON.parse("{\n" +
+    "    \"title\": \"Recent Stocked Waters - California [ds778]\",\n" +
+    "    \"description\": \"This dataset represents locations that have been stocked with fish by the California Department of Fish and Wildlife during the current year and the two preceeding years. Each feature in this dataset represents a California Department of Fish and Wildlife hatcherys inland program fish stocking release water as described in the California Department of Fish and Wildlifes statewide hatchery database. Release water is defined as surface water where fish stocking took place. A single release water may be a moving water such as a portion of a stream or river, or a non-moving water such as a lake, reservoir, or pond. Note that there may be multiple fish planting sites on a designated water during a stocking event but these individual sites are not represented in this dataset.\",\n" +
+    "    \"organization\": \"Californa Department of Fish and Wildlife\",\n" +
+    "    \"resources\": [\n" +
+    "        {\n" +
+    "            \"title\": \"CSV\",\n" +
+    "            \"uri\": \"http://data-cdfw.opendata.arcgis.com/datasets/216bf09054564e7c94b026528ffa0cd1_0.csv\",\n" +
+    "            \"type\": \"csv\"\n" +
+    "        }\n" +
+    "    ],\n" +
+    "    \"created\": \"2019-01-04T18:18:17\",\n" +
+    "    \"modified\": \"2019-01-04T18:18:17\",\n" +
+    "    \"identifier\": \"8c33b8a0-584b-4382-9c81-605ff8c90a18\"\n" +
+    "}");
+
+storiesOf('Dataset', module)
+    .add('Default', () => <Dataset doc={dataset}/>)
+
+let resource = JSON.parse("{\n" +
+    "            \"title\": \"CSV\",\n" +
+    "            \"uri\": \"http://data-cdfw.opendata.arcgis.com/datasets/216bf09054564e7c94b026528ffa0cd1_0.csv\",\n" +
+    "            \"type\": \"csv\"\n" +
+    "        }");
+
+storiesOf('Resource', module)
+    .add('Default', () => <Resource doc={resource}/>)
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   .logo {
@@ -11,8 +11,8 @@ const Wrapper = styled.div`
     line-height: 1em;
     margin-bottom: 10px;
     a {
-     color: ${props => props.theme.headingColor};
-     font-size: 1.8rem;
+      color: ${props => props.theme.headingColor};
+      font-size: 1.8rem;
     }
   }
   .slogan {
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     .logo,
     .site-name {
-      display:block;
+      display: block;
     }
   }
 `;

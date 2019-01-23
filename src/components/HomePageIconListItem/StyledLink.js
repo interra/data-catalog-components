@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledLink = styled.a`
   border: 1px solid ${props => props.theme.borderColor};
@@ -26,6 +26,6 @@ const StyledLink = styled.a`
     max-height: 100px;
     margin-bottom: 10px;
   }
-`
+`;
 
-export default StyledLink
+export default StyledLink;

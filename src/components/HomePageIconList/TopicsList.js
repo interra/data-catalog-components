@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import List from '../List';
+import styled from "styled-components";
+import List from "../List";
 
 const TopicsList = styled(List)`
   display: flex;

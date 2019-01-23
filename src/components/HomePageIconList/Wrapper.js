@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding-top: 24px;
@@ -16,6 +16,6 @@ const Wrapper = styled.div`
     padding-left: 15px;
     padding-right: 15px;
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;

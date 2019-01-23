@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   background: #fff;
@@ -22,9 +22,9 @@ const Wrapper = styled.div`
     font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     margin: 1em 0;
-    padding-bottom: .75em;
+    padding-bottom: 0.75em;
   }
   .format-types {
     display: flex;
@@ -38,20 +38,26 @@ const Wrapper = styled.div`
   .label {
     border-radius: 3px;
     color: white;
-    font-size: .85rem;
+    font-size: 0.85rem;
     font-weight: 500;
     line-height: 1.6rem;
     white-space: nowrap;
     display: inline-block;
     padding: 0 8px;
-    margin: .75em 16px .75em 0;
+    margin: 0.75em 16px 0.75em 0;
     &:first-of-type {
       margin-left: 0;
     }
   }
-  .label[data-format="csv"]  { background: #dfb100; }
-  .label[data-format="json"] { background: #ef7100; }
-  .label[data-format="pdf"]  { background: #e0051e; }
+  .label[data-format="csv"] {
+    background: #dfb100;
+  }
+  .label[data-format="json"] {
+    background: #ef7100;
+  }
+  .label[data-format="pdf"] {
+    background: #e0051e;
+  }
 `;
 
 export default Wrapper;

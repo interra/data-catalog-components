@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.footerBackgroundColor};
@@ -12,7 +12,9 @@ const Wrapper = styled.div`
     flex-wrap: nowrap;
     justify-content: space-around;
   }
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     color: ${props => props.theme.footerText};
   }
   a {
@@ -24,7 +26,7 @@ const Wrapper = styled.div`
     }
   }
   ul {
-    list-style-type:none;
+    list-style-type: none;
     float: left;
     list-style: none;
     margin: 0 40px 0 0;

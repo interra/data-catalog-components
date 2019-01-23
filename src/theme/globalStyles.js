@@ -1,5 +1,5 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import defaultTheme from './default'
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import defaultTheme from "./default";
 
 const GlobalStyles = createGlobalStyle`
   @import url('http://fonts.googleapis.com/css?family=Rubik:300,500,700&amp;subset=latin');
@@ -24,5 +24,5 @@ const GlobalStyles = createGlobalStyle`
     }
 
   }
-`
+`;
 export default GlobalStyles;

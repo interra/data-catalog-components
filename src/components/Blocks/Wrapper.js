@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   .pane-content {
@@ -8,7 +8,8 @@ const Wrapper = styled.div`
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    h2,h3 {
+    h2,
+    h3 {
       margin-top: 0;
     }
     padding-top: 50px;

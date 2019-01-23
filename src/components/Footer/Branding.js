@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Branding = styled.div`
   flex-grow: 1.5;
@@ -12,7 +12,7 @@ const Branding = styled.div`
     width: 90px;
     float: left;
     margin-right: 20px !important;
-    opacity: .3;
+    opacity: 0.3;
   }
   p {
     margin: 0 2em 1em 0;
@@ -21,7 +21,7 @@ const Branding = styled.div`
     margin: 0 0 1em 110px;
     i {
       font-size: 25px;
-      opacity: .3;
+      opacity: 0.3;
       margin: 0 1em 1em 0;
       &:hover {
         opacity: 1;

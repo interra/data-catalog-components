@@ -13,7 +13,9 @@ class Dataset extends Component {
 
         doc.resources.map(x => x.identifier = doc.identifier)
 
-        doc.distribution = doc.resources
+        if (doc.resources.length > 0) {
+          doc.distribution = doc.resources[0].uri
+        }
 
         doc.issued = doc.created
 
@@ -28,7 +30,7 @@ class Dataset extends Component {
                     type: "Text"
                 },
                 distribution: {
-                    type: "Resource"
+                  type: "FileDownload"
                 }
             },
             Table: {

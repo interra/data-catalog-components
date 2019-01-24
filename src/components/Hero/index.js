@@ -11,7 +11,7 @@ class Hero extends React.Component {
     const Align = this.props.alignment;
 
     return (
-      <Wrapper className="jumbotron" style={{ backgroundImage: `url(${Background})` }}>
+      <Wrapper className="hero" style={{ backgroundImage: `url(${Background})` }}>
         <div className={'block ' + Align}>
           <h1 className="hero-title">{this.props.title}{this.props.title2}</h1>
           <p>{this.props.intro}</p>
@@ -25,7 +25,7 @@ class Hero extends React.Component {
 Hero.defaultProps = {
     state: "loading",
     identifier: "1234",
-    image: "https://s3.amazonaws.com/dkan-default-content-files/files/cityscape-blue.jpg",
+    image: "https://s3.amazonaws.com/dkan-default-content-files/files/d2-hero.jpg",
     title: "Welcome to DKAN",
     intro: "DKAN is an open-source data management platform. It treats data as content so that you can easily publish, manage, and maintain your open data no matter the size of your team or the level of technical expertise.",
     alignment: "center",

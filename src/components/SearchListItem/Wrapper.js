@@ -38,12 +38,12 @@ const Wrapper = styled.div`
   .label {
     border-radius: 3px;
     color: white;
-    font-size: 0.85rem;
+
     font-weight: 500;
     line-height: 1.6rem;
     white-space: nowrap;
     display: inline-block;
-    padding: 0 8px;
+    padding: 4px 8px;
     margin: 0.75em 16px 0.75em 0;
     &:first-of-type {
       margin-left: 0;

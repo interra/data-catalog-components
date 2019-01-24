@@ -11,7 +11,7 @@ class OrgBlock extends Component {
           <Wrapper>
             <a href={"organization/" + this.props.identifier}>
               <img src={this.props.icon} />
-              <h5>{this.props.title}</h5>
+              <h3>{this.props.title}</h3>
               {this.props.description}
             </a>
           </Wrapper>

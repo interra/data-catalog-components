@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 function PageItemString(props) {
   const label = props.label ? <strong>{props.labelValue}:</strong> : '';
   return (

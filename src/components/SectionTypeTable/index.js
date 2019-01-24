@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Item from './Item';
 import Wrapper from './Wrapper';
+import styled from 'styled-components';
+
 
 function SectionTypeTable(props) {
   const rows = Object.keys(props).map((prop, index) => {
@@ -14,9 +16,9 @@ function SectionTypeTable(props) {
   });
   if (rows.length) {
     return (
-      <div style={{clear: "both", padding: "5px 0"}}>
+      <Wrapper className="dataset-information">
         <h3>Additional Information</h3>
-        <table className="table table-bordered table-hover">
+        <table className="table table-bordered table-hover table-striped">
           <thead>
             <tr>
               <th>Label</th>
@@ -27,7 +29,7 @@ function SectionTypeTable(props) {
             {rows}
           </tbody>
         </table>
-      </div>
+      </Wrapper>
     );
   } else {
     return (<span></span>);

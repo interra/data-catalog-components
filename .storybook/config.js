@@ -3,11 +3,10 @@ import { configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
 import React from 'react';
 
-import { css } from '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import GlobalStyles from '../src/theme/globalStyles';
 import Theme from '../src/theme/default'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyles from '../src/theme/globalStyles';
+
 
 function withGlobalStyles(storyFn) {
   return (

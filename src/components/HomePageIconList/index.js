@@ -10,7 +10,7 @@ class HomePageIconList extends Component {
     const { items } = this.props;
     return (
       <Wrapper className="container-fluid">
-        <h2 class="pane-title">DATASET TOPICS</h2>
+        <h2 className="pane-title">DATASET TOPICS</h2>
         <TopicsList items={items} className="topics-list" component={HomePageIconListItem} />
       </Wrapper>
     );

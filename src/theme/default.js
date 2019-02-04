@@ -30,7 +30,11 @@ const defaultTheme = {
   footerBackgroundColor: "#004466",
   footerText: "#FFFFFF",
   footerLink: "#FFFFFF",
-  footerLinkHover: "#afc0cc"
+  footerLinkHover: "#afc0cc",
+  info: "#16A2B7",
+  warning: "#FEC108",
+  danger: "#DB3545",
+  success: "#28A645",
 };
 
 export default defaultTheme;

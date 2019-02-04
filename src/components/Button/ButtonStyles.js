@@ -10,7 +10,7 @@ const ButtonStyles = css`
   font-weight: 500;
   letter-spacing: 1px;
   margin: 1rem;
-  padding: 10px 40px 8px;
+  padding: 4px 30px;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
@@ -28,6 +28,7 @@ const ButtonStyles = css`
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
     color: ${props => props.theme.primaryDark};
     text-transform: uppercase;
+    padding: 8px 30px 6px;
     &:hover,
     &:focus {
       background: white;

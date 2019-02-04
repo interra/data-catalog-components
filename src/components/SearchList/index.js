@@ -9,10 +9,10 @@ class SearchList extends Component {
   render() {
     const { items, message } = this.props;
     return ( 
-      <div>
+      <React.Fragment>
         { message }
         <ResultsList items={items} className="search-list" component={SearchListItem} />
-      </div>
+      </React.Fragment>
     )
   }
 

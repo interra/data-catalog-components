@@ -6,6 +6,8 @@ import HomePageIconList from '../src/components/HomePageIconList';
 
 import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
+import InputLarge from '../src/components/InputLarge';
+import FacetList from '../src/components/FacetList';
 
 import OrgBlock from '../src/components/OrgBlock';
 import Hero from '../src/components/Hero';
@@ -133,7 +135,7 @@ var items = [
         "modified": "1/12/2018",
         "publisher": "Publish Inc.",
         "format": distributions,
-        "theme": themes
+        "theme": ["geospatial"] 
     },
     {
         "identifier": 5678,
@@ -146,10 +148,49 @@ var items = [
     }
 ]
 
+const facets = {
+  "keyword": {
+    "label": "Tags",
+    "field": "keyword.title"
+  },
+  "theme": {
+    "label": "Category",
+    "field": "theme.title"
+  },
+  "org": {
+    "label": "Organization",
+    "field": "publisher.name"
+  },
+  "format": {
+    "label": "Format",
+    "field": "dataset.distribution.format"
+  }
+};  
+
+const selectedFacets = [["theme", "Water"]];
+
+const facetsResults = { 
+  "keyword": [["economy", 3],["budget", 5]],
+  "theme": [["Health Care", 20],["Water", 5]],
+  "org": [["Group 1", 5],["Group 4", 2]],
+  "format": [["csv", 20],["zip", 2]] 
+};  
+
+const query = "statistics";
+
+const facetListProps = {
+  query,
+  facets,
+  facetsResults,
+  selectedFacets,
+};
+
 storiesOf('Search', module)
-    .add('Item', () => <SearchListItem />)
-    .add('List', () => <SearchList items={items} />)
-    .add('Pagination', () => <Pagination />)
+  .add('Item', () => <SearchListItem />)
+  .add('List', () => <SearchList items={items} />)
+  .add('Input Large', () => <InputLarge value={query} />)
+  .add('Facet List', () => <FacetList {... facetListProps} />)
+  .add('Pagination', () => <Pagination />)
 
 storiesOf('Organization', module)
     .add('Org Block', () => <OrgBlock />)

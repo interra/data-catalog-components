@@ -12,9 +12,14 @@ const Wrapper = styled.div`
   }
   li {
     text-align: center;
-    width: 25%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    li {
+      max-width: 25%;
+    }
   }
 `;
 

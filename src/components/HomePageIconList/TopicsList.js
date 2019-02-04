@@ -7,7 +7,7 @@ const TopicsList = styled(List)`
   align-content: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export default TopicsList;

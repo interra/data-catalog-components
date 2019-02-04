@@ -8,3 +8,6 @@ export { default as Footer } from "./components/Footer";
 export { default as StyledButton } from "./components/Button";
 export { default as Dataset } from "./components/Dataset";
 export { default as Resource } from "./components/Resource";
+export { default as InputLarge } from "./components/InputLarge";
+export { default as FacetList } from "./components/FacetList";
+export { default as SearhList } from "./components/SearhList";

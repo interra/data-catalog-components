@@ -10,6 +10,7 @@ const FormGroup = styled.div`
     width: 70%;
     height: 34px;
     font-weight: 300;
+    font-size: 1.6rem;
   }
   .input-group-btn {
     display: inline-block;

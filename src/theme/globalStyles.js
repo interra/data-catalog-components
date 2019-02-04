@@ -1,4 +1,4 @@
-import { css } from './bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import defaultTheme from './default'
 

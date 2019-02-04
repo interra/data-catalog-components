@@ -13,3 +13,10 @@ To see the available components:
     1) ``npm install``
 1) Start storybook
     1) ``npm run storybook``
+
+## Publishing
+
+1) Review exports in index.js
+2) Increase version in package.json
+3) run `npm run lib`
+4) run `npm publish`

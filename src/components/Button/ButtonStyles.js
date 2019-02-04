@@ -8,8 +8,9 @@ const ButtonStyles = css`
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
+  font-size: 1.6rem;
   letter-spacing: 1px;
-  margin: 1rem;
+  margin: 8px;
   padding: 4px 30px;
   text-align: center;
   text-decoration: none;

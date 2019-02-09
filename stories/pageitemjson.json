@@ -1,0 +1,63 @@
+{
+"accessLevel": "public",
+"landingPage": "https://data.medicare.gov/d/23ew-n7w9",
+"bureauCode": [
+"009:38"
+],
+"issued": "2018-10-17",
+"@type": "dcat:Dataset",
+"modified": "2019-01-26T20:16:07",
+"keyword": [
+{
+"title": "dfc",
+"identifier": "dfc"
+},
+{
+"title": "dialysis",
+"identifier": "dialysis"
+},
+{
+"title": "dialysis facilities",
+"identifier": "dialysisfacilities"
+},
+{
+"title": "quality measures",
+"identifier": "qualitymeasures"
+}
+],
+"contactPoint": {
+"@type": "vcard:Contact",
+"fn": "Dialysis Facility Compare",
+"hasEmail": "mailto:DialysisData@umich.edu"
+},
+"publisher": {
+"@type": "org:Organization",
+"name": "Centers for Medicare & Medicaid Services (CMS)",
+"identifier": "centersformedicaremedicaidservicescms",
+"created": "2019-01-26T20:16:07",
+"modified": "2019-01-26T20:16:07"
+},
+"identifier": "23ew-n7w9",
+"description": "A list of all dialysis facilities registered with Medicare that includes addresses and phone numbers, as well as services and quality of care provided.",
+"title": "Dialysis Facility Compare - Listing by Facility",
+"programCode": [
+"009:000"
+],
+"distribution": [
+{
+"@type": "dcat:Distribution",
+"downloadURL": "https://data.medicare.gov/api/views/23ew-n7w9/rows.csv?accessType=DOWNLOAD",
+"mediaType": "text/csv",
+"title": "csv",
+"format": "csv",
+"identifier": "https-data-medicare-gov-api-views-23ew-n7w9-csv"
+}
+],
+"theme": [
+{
+"title": "Dialysis Facility Compare",
+"identifier": "dialysisfacilitycompare"
+}
+],
+"created": "2019-01-26T20:16:07"
+}

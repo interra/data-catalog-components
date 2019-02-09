@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import PageItemFileDownload from '../PageItemFileDownload';
 import PageItemOrg from '../PageItemOrg';
-import PageItemResource from '../PageItemResource';
+import PageItemTag from '../PageItemTag';
+//import PageItemResource from '../PageItemResource';
 import PageItemString from '../PageItemString';
 import PageItemText from '../PageItemText';
 import SectionTypeMain from '../SectionTypeMain';
@@ -27,10 +28,11 @@ class PageSection extends Component {
 
         const pageItems = {
             PageItemFileDownload,
+            PageItemTag,
             PageItemOrg,
             PageItemString,
             PageItemText,
-            PageItemResource,
+            //PageItemResource,
         };
 
         const SectionTypes = {

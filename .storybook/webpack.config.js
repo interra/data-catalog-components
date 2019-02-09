@@ -23,7 +23,14 @@ module.exports = (storybookBaseConfig, configType) => {
     {
       test: /\.(woff|woff2|eot|ttf|svg)$/,
       include: path.resolve(__dirname, "../src"),
-      use: 'url-loader'
+      use: [
+        {
+          loader: 'url-loader',
+        },
+        {
+          loader: 'file-loader',
+        },
+      ],
     }
   );
 

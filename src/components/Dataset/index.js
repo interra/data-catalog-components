@@ -7,16 +7,6 @@ class Dataset extends Component {
 
         let doc = this.props.doc
 
-        doc.publisher = {
-            name: doc.organization
-        }
-
-        doc.resources.map(x => x.identifier = doc.identifier)
-
-        if (doc.resources.length > 0) {
-          doc.distribution = doc.resources[0].uri
-        }
-
         doc.issued = doc.created
 
         const configuration = {

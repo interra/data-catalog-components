@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Wrapper from './Wrapper';
+// import '../../theme/dkan-flaticon.css';
 
 function PageItemResource(props) {
   const label = props.label ? <strong>{props.labelValue}:</strong> : '';
-  const resource = props.data.doc;
+  const resource = props.data.doc.distribution.pop();
+
   const item =
-    <div style={{position: "relative"}}>
+    <Wrapper style={{position: "relative"}}>
       <a style={{padding: "0 0 0 40px", lineHeight: "50px"}}
-            href={props.data.value} title={`${resource.format}`}>
+            href={`${resource.downloadURL}`} title={`${resource.format}`}>
         <span
           data-toggle='tooltip'
           data-placement='top'
@@ -17,9 +20,9 @@ function PageItemResource(props) {
           >
             {resource.format}
           </span>
-          {props.data.value}
+          {resource.title}
       </a>
-    </div>
+    </Wrapper>
   return (
     <div style={{padding: "15px 0 0 0", clear: "both"}}>
       {label} {item}

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import '../../theme/dkan-flaticon.css';
 
 const Wrapper = styled.div`
   .format-label {
@@ -14,7 +13,6 @@ const Wrapper = styled.div`
     z-index: 0;
   }
   .format-label[data-format=csv]:before {
-    content: "f6dd";
     color: #dfb100;
     font-family: "FontAwesome";
   }

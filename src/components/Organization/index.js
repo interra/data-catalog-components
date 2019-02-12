@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -24,11 +23,11 @@ const Wrapper = styled.div`
   }
 `;
 
-function PageItemOrg(props) {
-  const name = props.data.value.name;
-  const image = props.data.value.image ? <img alt={name} src={props.data.value.image} /> : <img alt='Orgnaization Image' src='https://s3.amazonaws.com/dkan-default-content-files/files/group.png' />;
-  const description = props.data.value.description;
-  const link = `/organization/${props.data.value.identifier}`;
+function Organization(props) {
+  const {name, description, identifier} = props
+  const image = props.image ? <img alt={name} src={props.image} /> : <img alt='Orgnaization Image' src='https://s3.amazonaws.com/dkan-default-content-files/files/group.png' />;
+
+  const link = `/organization/${identifier}`;
 
   return (
     <Wrapper>
@@ -39,9 +38,4 @@ function PageItemOrg(props) {
   );
 }
 
-PageItemOrg.propTypes = {
-  item: PropTypes.any,
-  field: PropTypes.any,
-};
-
-export default PageItemOrg;
+export default Organization;

@@ -10,10 +10,10 @@ const Wrapper = styled.div`
   }
 `;
 
-function PageItemText(props) {
-  const label = props.label ? <strong>{props.labelValue}:</strong> : '';
+function Text(props) {
+  const label = (props.label && props.label.length > 0) ? <strong>{props.label}:</strong> : '';
   const parser = new Parser();
-  const text = props.data.value ?  parser.parse(props.data.value) : '';
+  const text = props.value ?  parser.parse(props.value) : '';
 
   return (
     <Wrapper className="dataset-body" style={{ fontSize: '1.6rem' }}>
@@ -22,8 +22,4 @@ function PageItemText(props) {
   );
 }
 
-PageItemText.propTypes = {
-  item: PropTypes.any,
-};
-
-export default PageItemText;
+export default Text;

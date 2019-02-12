@@ -1,12 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Item from './Item';
-import Wrapper from './Wrapper';
-
-function PageItemTag(props) {
-  const label = props.label ? <strong>{props.labelValue}:</strong> : '';
-  const tags = props.doc.keyword.map((tag) => {
+function Tags(props) {
+  const label = props.label ? <strong>{props.label}:</strong> : '';
+  const tags = props.tags.map((tag) => {
 
     return (
       <div
@@ -24,8 +20,4 @@ function PageItemTag(props) {
   );
 }
 
-PageItemTag.propTypes = {
-  item: PropTypes.any,
-};
-
-export default PageItemTag;
+export default Tags;

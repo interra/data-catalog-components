@@ -21,9 +21,16 @@ import Pagination from '../src/components/Pagination';
 import Blocks from '../src/components/Blocks';
 import StepsBlock from '../src/components/Blocks/StepsBlock';
 import StatBlock from '../src/components/Blocks/StatBlock';
-import Dataset from '../src/components/Dataset';
-import Resource from '../src/components/Resource';
-import PageItemTag from '../src/components/PageItemTag';
+import FileDownload from '../src/components/FileDownload';
+import Organization from '../src/components/Organization';
+import String from '../src/components/String';
+import Text from '../src/components/Text';
+import Title from '../src/components/Title';
+import Table from '../src/components/Table';
+import Tags from '../src/components/Tags';
+
+
+
 import data from './pageitemjson.json';
 
 storiesOf('General', module)
@@ -203,16 +210,47 @@ storiesOf('Footer', module)
 
 let dataset = data;
 
+let resource = {
+  "downloadURL": "http://css4.pub/2015/icelandic/dictionary.pdf",
+  "format": "pdf",
+  "title": "Dictionary",
+}
+
+const configuration = {
+  issued: {
+    label: "Release Data"
+  },
+  identifier: {
+    label: "Unique Identifier"
+  },
+  modified: {
+    label: "Last Update"
+  }
+}
+
+const data2 = {
+  issued: "1/12/2015",
+  identifier: "1234567",
+  "modified": "2/3/2019"
+}
+
+const tags = [
+  {identifier: "hello", title: "Hello"},
+  {identifier: "good-bye", title: "Goodbye"},
+]
+
 storiesOf('Dataset', module)
-    .add('Default', () => <Dataset doc={dataset}/>)
-    //.add('Default', () => <PageItemTag doc={dataset}/>)
+  .add('File Download', () => <FileDownload label="Label" resource={resource} />)
+  .add('File Download - No label', () => <FileDownload resource={resource} />)
+  .add('Organization', () => <Organization name={"Org"} description={"This is an organization."} identifier={"org"} />)
+  .add('String', () => <String label={"I am a label"} value={"I am a string."} />)
+  .add('String - No label', () => <String value={"I am a string."} />)
+  .add('Text', () => <Text label={"I am a label"} value={"<u>I am an underlined string.</u>"} />)
+  .add('Text - No label', () => <Text value={"<u>I am an underlined string.</u>"} />)
+  .add('Title', () => <Title title={"I am a title"} />)
+  .add('Table', () => <Table configuration={configuration} data={data2} />)
+  .add('Tags', () => <Tags label={"Tags"} tags={tags} />)
 
-// let resource = JSON.parse("{\n" +
-//     "            \"title\": \"CSV\",\n" +
-//     "            \"downloadURL\": \"http://data-cdfw.opendata.arcgis.com/datasets/216bf09054564e7c94b026528ffa0cd1_0.csv\",\n" +
-//     "            \"format\": \"csv\"\n" +
-//     "        }");
 
-// storiesOf('Resource', module)
-//     .add('Default', () => <Resource doc={resource}/>)
+
 

@@ -30,7 +30,7 @@ function prepareLink(query, selectedFacets, facetKey, name, active = false) {
   return '?' + link;
 }
 
-function FacetBlocks({ title, items, facetKey, selectedFacets, query}) {
+function FacetBlocks({ title, items, facetKey, selectedFacets, query, url}) {
   let content = (<ul></ul>);
   // Removes other items in the active category. TODO: move to HOC.
   let filtered = items[facetKey].filter((item, facetCategory) => {
@@ -56,7 +56,7 @@ function FacetBlocks({ title, items, facetKey, selectedFacets, query}) {
       }
     });
 
-    let link = prepareLink(query, selectedFacets, facetKey, name, active);
+    let link = url + prepareLink(query, selectedFacets, facetKey, name, active);
     return <LI key={`facet-${i}`}><a data-facet-type={facetKey} className={active} href={link}>{name} {value}</a></LI>
   });
 
@@ -65,7 +65,7 @@ function FacetBlocks({ title, items, facetKey, selectedFacets, query}) {
 }
 
 
-function FacetList({ facets, selectedFacets, facetsResults, query }) {
+function FacetList({ facets, selectedFacets, facetsResults, query, url }) {
 
   let content = (<div></div>);
 
@@ -81,6 +81,7 @@ function FacetList({ facets, selectedFacets, facetsResults, query }) {
         items: facetsResults,
         selectedFacets,
         facetKey: item,
+        url,
         query
       }
       return <FacetBlocks key={item} {... facetListProps} />

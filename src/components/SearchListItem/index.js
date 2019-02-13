@@ -53,7 +53,7 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
     // Put together the content of the repository
     const content = (
       <Wrapper key={`wrapper-${item.identifier}`} className="search-list-item">
-        <a href={"/dataset/" + item.identifier}>
+        <a href={item.ref}>
           <h2>{ item.title }</h2>
         </a>
         <div className="item-theme">

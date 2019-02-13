@@ -47,21 +47,25 @@ var topics = [
     {
         "identifier": "Morbi congue ",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/json.svg",
+        "ref": "here",
         "alt": "airplane"
     },
     {
         "identifier": "Suspendisse",
+        "ref": "there",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/openweb.svg",
         "alt": "backpack"
     },
     {
         "identifier": "Maecenas mauris",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/compass.svg",
+        "ref": "everywhere",
         "alt": "balloon"
     },
     {
         "identifier": "Praesent sollicitudin",
         "icon": "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/odf.svg",
+        "ref": "nowhere",
         "alt": "clock"
     }
 ]
@@ -144,6 +148,7 @@ var items = [
         "modified": "1/12/2018",
         "publisher": "Publish Inc.",
         "format": distributions,
+        "ref": "dataset/wow",
         "theme": ["geospatial"]
     },
     {
@@ -153,6 +158,7 @@ var items = [
         "modified": "2/12/2018",
         "publisher": "Publish Inc.",
         "format": distributions,
+        "ref": "dataset/how",
         "theme": themes
     }
 ]
@@ -192,10 +198,11 @@ const facetListProps = {
   facets,
   facetsResults,
   selectedFacets,
+  url: "search"
 };
 
 storiesOf('Search', module)
-  .add('Item', () => <SearchListItem />)
+  .add('Item', () => <SearchListItem item={items[0]}/>)
   .add('List', () => <SearchList items={items} />)
   .add('Input Large', () => <InputLarge value={query} />)
   .add('Facet List', () => <FacetList {... facetListProps} />)

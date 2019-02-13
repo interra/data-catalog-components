@@ -7,7 +7,7 @@ class HomePageIconListItem extends React.PureComponent {
     const { item } = this.props;
 
     const content = (
-      <StyledLink href={"/search/" + item.ref}>
+      <StyledLink href={item.ref}>
         <img src={item.icon} alt={item.alt} />
         <div>{item.identifier}</div>
       </StyledLink>

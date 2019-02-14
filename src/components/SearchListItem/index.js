@@ -6,13 +6,13 @@ import excerpts from 'excerpts';
 
 class SearchListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
-  formats(distributions) {
-    if (!distributions) {
+  formats(distribution) {
+    if (!distribution) {
       return null;
     }
     else {
       let i = 0;
-      return distributions.map((dist) => {
+      return distribution.map((dist) => {
         i++
         const format = dist.format === undefined ? '' : dist.format.toLowerCase();
         return <div title={`format: ${dist.format}`}
@@ -23,21 +23,21 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
     }
   }
 
-  themes(themes) {
-    if (!themes) {
+  themes(theme) {
+    if (!theme) {
       return null;
     }
     else {
       let i = 0;
-      return themes.map(function(theme) {
+      return theme.map(function(topic) {
         i++
-        const icon = theme.icon ? theme.icon : 'cog';
-        return <div key={`dist-${theme.identifier}-${i}`}>
+        const icon = topic.icon ? topic.icon : 'cog';
+        return <div key={`dist-${topic.identifier}-${i}`}>
           <div
-            title={`theme: ${theme.title}`} key={`dist-id-${theme.identifier}-${i}`}
+            title={`theme: ${topic.title}`} key={`dist-id-${topic.identifier}-${i}`}
             className={`font-icon-select-1 font-icon-select-1-${icon}`}>
             </div>
-            {theme.title}
+            {topic.title}
           </div>
       })
     }

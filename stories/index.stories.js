@@ -29,9 +29,8 @@ import Title from '../src/components/Title';
 import Table from '../src/components/Table';
 import Tags from '../src/components/Tags';
 
+import data from './example.json';
 
-
-import data from './pageitemjson.json';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
@@ -118,7 +117,7 @@ storiesOf('Home', module)
     .add('Stat Blocks', () => <Blocks items={stats} component={StatBlock} />)
     .add('Step Blocks', () => <Blocks items={api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)
 
-var themes = [
+var theme = [
     {
       "identifier": 1,
       "title": "Healthcare",
@@ -127,7 +126,7 @@ var themes = [
     }
 ]
 
-var distributions = [
+var distribution = [
   {
     "identifier": 1,
     "format": "csv"
@@ -147,9 +146,9 @@ var items = [
         "description": "Centers for Disease Control and Prevention data regarding varicella (chickenpox) virus incidence and mortality rates.",
         "modified": "1/12/2018",
         "publisher": "Publish Inc.",
-        "format": distributions,
+        "format": distribution,
         "ref": "dataset/wow",
-        "theme": ["geospatial"]
+        "theme": theme
     },
     {
         "identifier": 5678,
@@ -157,9 +156,9 @@ var items = [
         "description": "Statistics on U.S. smoking rates and tobacco taxation rates for all fifty states. *Source:* Centers for Disease Control and Prevention, 2015 https://www.cdc.gov/tobacco/data_statistics/state_data/ [1] ",
         "modified": "2/12/2018",
         "publisher": "Publish Inc.",
-        "format": distributions,
+        "format": distribution,
         "ref": "dataset/how",
-        "theme": themes
+        "theme": theme
     }
 ]
 

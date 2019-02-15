@@ -20,3 +20,7 @@ To see the available components:
 2) Increase version in package.json
 3) run `npm run lib`
 4) run `npm publish`
+
+## Publish to Github Pages
+
+1) run `npm run prepublish; npm run deploy-storybook`

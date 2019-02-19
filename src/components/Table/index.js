@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import String from '../String';
+import Text from '../Text';
 
 class Table extends Component {
 
@@ -25,7 +25,7 @@ class Table extends Component {
 
 
           const rows = mapped.map((row, index) => {
-            return (<tr key={row.label}><td>{row.label}</td><td>{row.value}</td></tr>);
+            return (<tr key={row.label}><td>{row.label}</td><td><Text value={row.value}/></td></tr>);
           });
 
           if (rows.length) {

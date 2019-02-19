@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 import IconCSV from '../Icons/IconCSV';
 
-
 function FileDownload(props) {
 
   const { label, resource } = props;
 
+
   const item =
     <Wrapper style={{position: "relative"}}>
       <IconCSV/>
-      <a style={{lineHeight: "50px"}}
+      <a style={{padding: "0 0 0 40px", lineHeight: "50px"}}
             href={resource.downloadURL} title={resource.format}>
         <span
           data-toggle='tooltip'

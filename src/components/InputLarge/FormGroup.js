@@ -15,7 +15,27 @@ const FormGroup = styled.div`
   .input-group-btn {
     display: inline-block;
     button {
+      background-color: ${props => props.theme.primary};
+      border: none;
+      border-radius: 100px;
+      color: #fff;
+      cursor: pointer;
       display: inline-block;
+      font-weight: 500;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      margin: 0 8px;
+      padding: 4px 15px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
+      &:hover,
+      &:focus {
+        background-color: ${props => props.theme.primaryDark};
+      }
     }
   }
 `;

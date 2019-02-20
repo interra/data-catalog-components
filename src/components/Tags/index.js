@@ -11,6 +11,7 @@ function Tags(props) {
     flex-wrap: wrap;
     justify-content: flex-start;
     .tag {
+      margin: 5px;
       a {
         padding: 2px 10px 2px;
         line-height: 2.0rem;

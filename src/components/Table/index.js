@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-
+import Wrapper from './Wrapper';
 import Text from '../Text';
+
 
 class Table extends Component {
 
     render() {
 
-        const { data, configuration} = this.props;
+        const { data, configuration, title, th1, th2 } = this.props;
 
         const fields = Object.keys(configuration);
 
@@ -30,20 +31,20 @@ class Table extends Component {
 
           if (rows.length) {
             return (
-              <span>
-                <h3>Additional Information</h3>
+              <Wrapper>
+                <h3>{title}</h3>
                 <table className="table table-bordered table-hover table-striped">
                   <thead>
                   <tr>
-                    <th>Label</th>
-                    <th>Value</th>
+                    <th>{th1}</th>
+                    <th>{th2}</th>
                   </tr>
                   </thead>
                   <tbody>
                   {rows}
                   </tbody>
                 </table>
-              </span>
+              </Wrapper>
             );
           } else {
             return (<span></span>);
@@ -51,5 +52,11 @@ class Table extends Component {
 
         }
 }
+
+Table.defaultProps = {
+    title: "Additional Information",
+    th1: "Field",
+    th2: "Value"
+};
 
 export default Table;

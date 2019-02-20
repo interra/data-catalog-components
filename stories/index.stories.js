@@ -237,7 +237,35 @@ const configuration = {
 const data2 = {
   issued: "1/12/2015",
   identifier: "1234567",
-  "modified": "2/3/2019"
+  modified: "2/3/2019"
+}
+
+const labelsT1 = {
+  rows: {
+    label: "1"
+  }
+}
+
+const valuesT1 = {
+  rows: "35"
+}
+
+const labelsT2 = {
+  a: {
+    label: "County"
+  },
+  b: {
+    label: "State"
+  },
+  c: {
+    label: "Population"
+  }
+}
+
+const valuesT2 = {
+  a: "String",
+  b: "String",
+  c: "Number"
 }
 
 const tags = [
@@ -254,7 +282,9 @@ storiesOf('Dataset', module)
   .add('Text', () => <Text label={"I am a label"} value={"<u>I am an underlined string.</u>"} />)
   .add('Text - No label', () => <Text value={"<u>I am an underlined string.</u>"} />)
   .add('Title', () => <Title title={"I am a title"} />)
-  .add('Table', () => <Table configuration={configuration} data={data2} />)
+  .add('Table 1', () => <Table configuration={configuration} data={data2} title="Additional Information" th1="Field" th2="Value" />)
+  .add('Table 2', () => <Table configuration={labelsT1} data={valuesT1} title="What's in this Dataset?" th1="Rows" th2="Columns" />)
+  .add('Table 3', () => <Table configuration={labelsT2} data={valuesT2} title="Columns in this Dataset" th1="Column Name" th2="Type" />)
   .add('Tags', () => <Tags label={"Tags"} tags={tags} />)
 
 

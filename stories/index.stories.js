@@ -202,7 +202,7 @@ const facetListProps = {
 
 storiesOf('Search', module)
   .add('Item', () => <SearchListItem item={items[0]}/>)
-  .add('List', () => <SearchList items={items} />)
+  .add('List', () => <SearchList items={items} message="2 Datasets found" />)
   .add('Input Large', () => <InputLarge value={query} />)
   .add('Facet List', () => <FacetList {... facetListProps} />)
   .add('Pagination', () => <Pagination />)

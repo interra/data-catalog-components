@@ -8,9 +8,9 @@ class SearchList extends Component {
 
   render() {
     const { items, message } = this.props;
-    return ( 
+    return (
       <React.Fragment>
-        { message }
+        <div className="results-message">{ message }</div>
         <ResultsList items={items} className="search-list" component={SearchListItem} />
       </React.Fragment>
     )

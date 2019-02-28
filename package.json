@@ -1,6 +1,6 @@
 {
   "name": "interra-data-catalog-components",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "React Components for Open Data Catalogs.",
   "main": "lib/index.js",
   "repository": {

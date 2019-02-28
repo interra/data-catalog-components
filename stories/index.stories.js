@@ -9,7 +9,6 @@ import SearchListItem from '../src/components/SearchListItem';
 import InputLarge from '../src/components/InputLarge';
 import FacetList from '../src/components/FacetList';
 
-import OrgBlock from '../src/components/OrgBlock';
 import Hero from '../src/components/Hero';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -206,9 +205,6 @@ storiesOf('Search', module)
   .add('Input Large', () => <InputLarge value={query} />)
   .add('Facet List', () => <FacetList {... facetListProps} />)
   .add('Pagination', () => <Pagination />)
-
-storiesOf('Organization', module)
-    .add('Org Block', () => <OrgBlock />)
 
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)

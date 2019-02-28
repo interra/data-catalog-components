@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const navBarBackColor = "#030d17";
-
 export default styled.div`
   background-color: ${props => props.theme.navBarBackgroundColor};
   background-image: ${props => props.theme.navBarBackgroundImage};

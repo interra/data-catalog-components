@@ -15,7 +15,7 @@ class Hero extends React.Component {
         <div className={'block ' + Align}>
           <h1 className="hero-title">{this.props.title}{this.props.title2}</h1>
           <p>{this.props.intro}</p>
-          <StyledButton href="/about" className="btn-hero">Learn more</StyledButton>
+          <StyledButton href="/about" className="btn-hero"><a href="/about">Learn more</a></StyledButton>
         </div>
       </Wrapper>
     );

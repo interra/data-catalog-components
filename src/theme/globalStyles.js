@@ -37,6 +37,23 @@ const GlobalStyles = createGlobalStyle`
     .table-bordered th {
       border-color: ${defaultTheme.borderColor};
     }
+    .form-control {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    .theme-wrapper {
+      border-bottom: 1px solid #dddddd;
+      padding: 5px 0;
+      margin-bottom: 10px;
+      display: flex;
+      .theme {
+        color: #A7AAAC;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
 
   }
 `;

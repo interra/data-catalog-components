@@ -31,6 +31,14 @@ const Wrapper = styled.div`
   h2 {
     margin-top: 0;
   }
+  .btn-hero a {
+    color: ${props => props.theme.primaryDark};
+    &:hover,
+    &:focus {
+      color: ${props => props.theme.primaryDark};
+      text-decoration: none;
+    }
+  }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
   }

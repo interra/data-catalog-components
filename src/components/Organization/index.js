@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   img {
     max-width: 120px;
   }
+  h3.org-name {
+    margin 15px 0;
+  }
   a {
     text-decoration:none;
     color: ${props => props.theme.linkColor};
@@ -32,7 +35,7 @@ function Organization(props) {
   return (
     <Wrapper>
       <div className="org-image">{image}</div>
-      <h3><a href={link}>{name}</a></h3>
+      <h3 className="org-name"><a href={link}>{name}</a></h3>
       {description}
     </Wrapper>
   );

@@ -2,12 +2,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   a {
-    color: ${props => props.theme.linkColor};
     line-height: 50px;
     padding-left: 5px;
-    &:hover {
-      color: ${props => props.theme.linkHoverColor};
-    }
   }
   .format-label {
     color: transparent;

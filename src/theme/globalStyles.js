@@ -21,6 +21,12 @@ const GlobalStyles = createGlobalStyle`
     a, input, button, textarea {
       transition: all 0.2s linear;
     }
+    a {
+      color: ${defaultTheme.linkColor};
+      &:hover {
+        color: ${defaultTheme.linkHoverColor};
+      }
+    }
     h1,h2,h3,h4,h5 { color: ${defaultTheme.headingColor}; }
     h1 { font-size: 3.0rem }  // 30px
     h2 { font-size: 2.4rem; } // 24px

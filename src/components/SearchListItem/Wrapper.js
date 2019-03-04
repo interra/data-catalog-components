@@ -52,6 +52,7 @@ const Wrapper = styled.div`
   .label[data-format="csv"]     { background: #dfb100; }
   .label[data-format="json"]    { background: #ef7100; }
   .label[data-format="pdf"]     { background: #e0051e; }
+  .label[data-format="rdf"],     
   .label[data-format="rdf+xml"] { background: #0b4498; }
   .label[data-format="xml"]     { background: #6E5777; }
   .label[data-format="data"]    { background: #666666; }

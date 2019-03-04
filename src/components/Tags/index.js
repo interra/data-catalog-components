@@ -77,8 +77,8 @@ function Tags(props) {
   }, '<div></div>');
 
   return (
-    <Wrapper>
-    {label} {tags}
+    <Wrapper className="tag-wrapper">
+      {label} {tags}
     </Wrapper>
   );
 }

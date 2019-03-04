@@ -135,6 +135,12 @@ var distribution = [
   },
   { "identifier":3,
     "format": "pdf"
+  },
+  { "identifier":3,
+    "format": "rdf"
+  },
+  { "identifier":3,
+    "format": "xml"
   }
 ]
 

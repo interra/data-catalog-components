@@ -136,11 +136,14 @@ var distribution = [
   { "identifier":3,
     "format": "pdf"
   },
-  { "identifier":3,
+  { "identifier":4,
     "format": "rdf"
   },
-  { "identifier":3,
+  { "identifier":5,
     "format": "xml"
+  },
+  { "identifier":6,
+    "format": "data"
   }
 ]
 

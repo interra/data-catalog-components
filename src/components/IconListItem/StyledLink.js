@@ -26,6 +26,9 @@ const StyledLink = styled.a`
     max-height: 100px;
     margin-bottom: 10px;
   }
+  svg {
+    margin: 10px;
+  }
 `;
 
 export default StyledLink;

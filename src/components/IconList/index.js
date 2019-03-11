@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TopicsList from './TopicsList';
-import HomePageIconListItem from '../HomePageIconListItem';
+import List from "../List";
+import IconListItem from '../IconListItem';
 import Wrapper from './Wrapper';
 
-class HomePageIconList extends Component {
+class IconList extends Component {
 
   render() {
     const { items } = this.props;
     return (
       <Wrapper className="container-fluid">
         <h2 className="pane-title">DATASET TOPICS</h2>
-        <TopicsList items={items} className="topics-list" component={HomePageIconListItem} />
+        <List items={items} className="topics-list" component={IconListItem} />
       </Wrapper>
     );
   }
 
 }
 
-HomePageIconList.defaultProps = {
+IconList.defaultProps = {
   items: [],
 };
 
-HomePageIconList.propTypes = {
+IconList.propTypes = {
   items: PropTypes.any,
 };
 
-export default HomePageIconList;
+export default IconList;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 10px 0;
+  margin: 2rem 0;
   .table-striped,
   .table-hover {
     > tbody tr:nth-of-type(odd):hover,
@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   }
   table {
     border-color: ${props => props.theme.borderColor}
+    margin: 1rem 0;
   }
 `;
 

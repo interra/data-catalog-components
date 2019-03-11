@@ -16,7 +16,7 @@ class IconXML extends React.Component {
 IconXML.defaultProps = {
     width: 50,
     height: 50,
-    fill: '#6E5777',
+    fill: '#5e962c',
     title: 'XML'
 };
 

@@ -15,6 +15,14 @@ const Wrapper = styled.div`
     padding-left: 15px;
     padding-right: 15px;
   }
+  .topics-list {
+    display: flex;
+    align-items: stretch;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
 
   @media screen and (min-width: 1200px) {
     li {

@@ -35,7 +35,7 @@ function FileDownload(props) {
   }
 
   const item =
-    <Wrapper style={{position: "relative"}}>
+    <div className="resource">
       {icon}
       <a href={resource.downloadURL} title={resource.format}>
         <span
@@ -49,11 +49,12 @@ function FileDownload(props) {
           </span>
           {resource.title}
       </a>
-    </Wrapper>
-  return (
-    <div style={{padding: "15px 0 0 0", clear: "both"}}>
-      {label} {item}
     </div>
+    
+  return (
+    <Wrapper className="file-download">
+      {label} {item}
+    </Wrapper>
   );
 }
 

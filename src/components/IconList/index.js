@@ -1,29 +1,43 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import List from "../List";
 import IconListItem from '../IconListItem';
 import Wrapper from './Wrapper';
 
-class IconList extends Component {
+function IconList(props) {
+  let content = (<div></div>);
+  const paneTitle = props.paneTitle;
+  const className = props.className;
 
-  render() {
-    const { items } = this.props;
-    return (
-      <Wrapper className="container-fluid">
-        <h2 className="pane-title">DATASET TOPICS</h2>
-        <List items={items} className="topics-list" component={IconListItem} />
-      </Wrapper>
-    );
+  // If we have items, render them
+  if (props.items) {
+      content = props.items.map((item) => (
+          <IconListItem key={`item-${item.ref}`} item={item} />
+      ));
+  } else {
+      // Otherwise render a single component
+      content = (<IconListItem />);
   }
 
+  return (
+      <Wrapper className="container-fluid">
+      <h2 className="pane-title">{ paneTitle }</h2>
+        <ul className={ className }>
+          {content}
+        </ul>
+      </Wrapper>
+  );
 }
 
 IconList.defaultProps = {
   items: [],
+  className: "icon-list",
+  paneTitle: "Icon List"
 };
 
 IconList.propTypes = {
-  items: PropTypes.any,
+  items: PropTypes.array,
+  className: PropTypes.string,
+  paneTitle: PropTypes.string
 };
 
 export default IconList;

@@ -10,18 +10,19 @@ const Wrapper = styled.div`
     margin-bottom: 24px;
     text-align: center;
   }
-  li {
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .topics-list {
+  ul {
+    list-style:none;
     display: flex;
     align-items: stretch;
     align-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+  }
+  li {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   @media screen and (min-width: 1200px) {

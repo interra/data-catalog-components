@@ -7,7 +7,7 @@ class Table extends Component {
 
     render() {
 
-        const { data, configuration, title, th1, th2 } = this.props;
+        const { data, configuration, title, th1, th2, tableclass } = this.props;
 
         const fields = Object.keys(configuration);
 
@@ -31,7 +31,7 @@ class Table extends Component {
 
           if (rows.length) {
             return (
-              <Wrapper>
+              <Wrapper className={tableclass}>
                 <h3>{title}</h3>
                 <table className="table table-bordered table-hover table-striped">
                   <thead>

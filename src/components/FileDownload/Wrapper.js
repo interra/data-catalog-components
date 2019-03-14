@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  clear: both;
+  margin: 15px 0;
+  .resource {
+    position: relative;
+  }
   a {
     line-height: 50px;
     padding-left: 5px;

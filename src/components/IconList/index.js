@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import IconListItem from '../IconListItem';
 import Wrapper from './Wrapper';
 
 function IconList(props) {
+  const ComponentToRender = props.component;
   let content = (<div></div>);
   const paneTitle = props.paneTitle;
   const className = props.className;
@@ -11,11 +11,11 @@ function IconList(props) {
   // If we have items, render them
   if (props.items) {
       content = props.items.map((item) => (
-          <IconListItem key={`item-${item.ref}`} item={item} />
+          <ComponentToRender key={`item-${item.ref}`} item={item} />
       ));
   } else {
       // Otherwise render a single component
-      content = (<IconListItem />);
+      content = (<ComponentToRender />);
   }
 
   return (
@@ -35,6 +35,7 @@ IconList.defaultProps = {
 };
 
 IconList.propTypes = {
+  component: PropTypes.func.isRequired,
   items: PropTypes.array,
   className: PropTypes.string,
   paneTitle: PropTypes.string

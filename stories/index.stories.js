@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import IconList from '../src/components/IconList';
+import IconListItem from '../src/components/IconListItem'
 
 import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
@@ -44,8 +45,8 @@ storiesOf('General', module)
     .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
 
 storiesOf('Home', module)
-    .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" className="icon-list" />)
-    .add('Topics List - internal images', () => <IconList items={home.topics2} paneTitle="Section Title" className="icon-list" />)
+    .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)
+    .add('Topics List - internal images', () => <IconList items={home.topics2} paneTitle="Section Title" component={IconListItem} className="icon-list" />)
     .add('Hero', () => <Hero />)
     .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />)
     .add('Step Blocks', () => <Blocks items={home.api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)

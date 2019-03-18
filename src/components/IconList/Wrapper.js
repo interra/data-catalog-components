@@ -5,10 +5,11 @@ const Wrapper = styled.div`
   padding-bottom: 24px;
   h2 {
     display: block;
-    font-size: 20px !important;
+    font-size: 2rem !important;
     letter-spacing: 7px;
     margin-bottom: 24px;
     text-align: center;
+    text-transform: uppercase;
   }
   ul {
     list-style:none;

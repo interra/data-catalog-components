@@ -10,13 +10,14 @@ class DataTableFilter extends React.Component {
     const fields = props.columns.map((col) => {
       return <option value={`${col.value}`}>{`${col.name}`}</option>
     })
-    const operator = props.operators.map((op) => {
+    const operator = props.query.map((op) => {
       return <option value={`${op.value}`}>{`${op.name}`}</option>
     })
 
     this.state = {
       rows: [{"column": "", "query": "", "value": ""}]
     };
+    console.log(this.state.rows);
   }
 
   handleRowValueChange = idx => evt => {
@@ -59,7 +60,7 @@ class DataTableFilter extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                {this.state && this.state.rows && this.state.rows.map(row, idx => (
+                {this.state && this.state.rows && this.state.rows.map((row, idx) => {
                   <tr>
                     <td>
                       <select defaultValue={row.column}>
@@ -80,7 +81,8 @@ class DataTableFilter extends React.Component {
                       <StyledButton className="close" type="button" onClick={this.handleRemoveRow(idx)}><span aria-hidden="true">×</span></StyledButton>
                     </td> 
                   </tr>
-                ))}
+                })}
+              
 
                 </tbody>
               </table>

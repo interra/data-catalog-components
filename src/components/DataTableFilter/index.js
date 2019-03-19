@@ -46,36 +46,34 @@ class DataTableFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
-      rows: [],
+      rows: [{column: "", query: "", value: ""}]
     };
-
-    // this.handleRemoveRow = this.handleRemoveRow.bind(this);
-    // this.handleAddRow = this.handleAddRow.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    event.preventDefault();
-    this.setState({value: event.target.value});
-  }
+  handleRowValueChange = idx => evt => {
+    const newRows = this.state.rows.map((row, sidx) => {
+      if (idx !== sidx) return row;
+      return { ...row, value: evt.target.value };
+    });
+
+    this.setState({ rows: newRows });
+  };
 
   handleAddRow = () => {
-    this.setState((prevState, props) => {
-      const row = { 
-        column: 'column-' + prevState.rows.length,
-        op: 'op-' + prevState.rows.length,
-        userinput: 'user-input-' + prevState.rows.length
-      };
-      return { rows: [...prevState.rows, row] };
+    this.setState({
+      rows: this.state.rows.concat([{ column: "", query: "", value: "" }])
     });
   };
 
-  handleRemoveRow = () => {
-    this.setState((prevState, props) => {
-      return { rows: prevState.rows.slice(1) };
+  handleRemoveRow = idx => () => {
+    this.setState({
+      rows: this.state.shareholders.filter((s, sidx) => idx !== sidx)
     });
+  };
+
+  handleSubmit = evt => {
+    const { rows } = this.state;
+    alert(`Filters: ${rows.length} added`);
   };
 
   render() {
@@ -99,42 +97,29 @@ class DataTableFilter extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                {this.state.rows.map(row => (
+                {this.state && this.state.rows && this.state.rows.map(row, idx => (
                   <tr>
                     <td>
-                      <select name={row.column}><option value=""></option>{ fields }</select>
-                    </td>
-                    <td>
-                      <select name={row.op}>
-                        { operator }
-                      </select>
-                    </td>
-                    <td>
-                      <input name={row.userinput} type="text" placeholder="Enter value here" value={this.state.value} onChange={this.handleChange} />  
-                    </td>
-                    <td>
-                      <StyledButton className="close" type="button" onClick={this.handleRemoveRow}><span aria-hidden="true">×</span></StyledButton>
-                    </td> 
-                  </tr>
-                ))}
-                  <tr>
-                    <td>
-                      <select name="column">
-                        <option value=''></option>
+                      <select defaultValue={row.column}>
+                        <option value=""></option>
                         { fields }
                       </select>
                     </td>
                     <td>
-                      <select name="op">
+                      <select defaultValue={row.query}>
+                        <option value=""></option>
                         { operator }
                       </select>
                     </td>
                     <td>
-                      <input id="input" type="text" placeholder="Enter value here" value={this.state.value} onChange={this.handleChange} />  
+                      <input type="text" placeholder="Enter value here" value={row.value} onChange={this.handleRowValueChange(idx)} />  
                     </td>
                     <td>
-                    </td>                    
+                      <StyledButton className="close" type="button" onClick={this.handleRemoveRow(idx)}><span aria-hidden="true">×</span></StyledButton>
+                    </td> 
                   </tr>
+                ))}
+
                 </tbody>
               </table>
 

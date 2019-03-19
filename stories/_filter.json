@@ -1,0 +1,38 @@
+{
+  "columns": [
+    {
+      "name": "Name",
+      "value": "name"
+    },
+    {
+      "name": "Age",
+      "value": "age"
+    },
+    {
+      "name": "Disposition",
+      "value": "disposition"
+    }
+  ],
+  "operators": [
+    {
+      "name": "Contains",
+      "value": "contains"
+    },
+    {
+      "name": "Equal to",
+      "value": "equal"
+    },
+    {
+      "name": "Not equal to",
+      "value": "notequal"
+    },
+    {
+      "name": "Greater than",
+      "value": "greater"
+    },
+    {
+      "name": "Less than",
+      "value": "less"
+    }
+  ]
+}

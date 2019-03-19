@@ -1,52 +1,21 @@
 import React from 'react'
-import ReactTable from 'react-table'
-import 'react-table/react-table.css'
 import Wrapper from './Wrapper'
 import StyledButton from '../Button';
 
-const columns = [
-  {
-    name: "Name",
-    value: "name"
-  },
-  {
-    name: "Age",
-    value: "age"
-  },
-  {
-    name: "Disposition",
-    value: "disposition"
-  }
-];
-
-const operators = [
-  {
-    "name": "Contains",
-    "value": "contains"
-  },
-  {
-    "name": "Equal to",
-    "value": "equal"
-  },
-  {
-    "name": "Not equal to",
-    "value": "notequal"
-  },
-  {
-    "name": "Greater than",
-    "value": "greater"
-  },
-  {
-    "name": "Less than",
-    "value": "less"
-  }
-];
 
 class DataTableFilter extends React.Component {
   constructor(props) {
     super(props);
+
+    const fields = props.columns.map((col) => {
+      return <option value={`${col.value}`}>{`${col.name}`}</option>
+    })
+    const operator = props.operators.map((op) => {
+      return <option value={`${op.value}`}>{`${op.name}`}</option>
+    })
+
     this.state = {
-      rows: [{column: "", query: "", value: ""}]
+      rows: [{"column": "", "query": "", "value": ""}]
     };
   }
 
@@ -77,13 +46,6 @@ class DataTableFilter extends React.Component {
   };
 
   render() {
-    const fields = columns.map((col) => {
-      return <option value={`${col.value}`}>{`${col.name}`}</option>
-    })
-    const operator = operators.map((op) => {
-      return <option value={`${op.value}`}>{`${op.name}`}</option>
-    })
-
     return (
       <Wrapper>
           <form>

@@ -29,7 +29,6 @@ import Title from '../src/components/Title';
 import Table from '../src/components/Table';
 import Tags from '../src/components/Tags';
 import DataTableFilter from '../src/components/DataTableFilter';
-import Form from '../src/components/Form';
 
 import data from './_data.json';
 import home from './_home.json';
@@ -92,6 +91,6 @@ storiesOf('Dataset', module)
   .add('Table 3', () => <Table configuration={tables.config3} data={tables.data3} title="Columns in this Dataset" th1="Column Name" th2="Type" tableclass="table-three" />)
   .add('Tags', () => <Tags label={"Tags"} tags={data.keyword} />)
   .add('Filter', () => <DataTableFilter columns={filter.columns} query={filter.operators}  />)
-  .add('Form', () => <Form columns={filter.columns} />)
+
 
 

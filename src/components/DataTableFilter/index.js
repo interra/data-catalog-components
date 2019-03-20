@@ -105,7 +105,7 @@ class DataTableFilter extends React.Component {
     })
 
     return (
-      <Wrapper>
+      <Wrapper onSubmit={this.handleSubmit}>
         <h3>Filter Columns:</h3>
         <table className="table table-striped">
           <thead>
@@ -122,13 +122,13 @@ class DataTableFilter extends React.Component {
             <tr>
               <td>
                 <select name="column" onChange={this.handleRowColumnChange(idx)} value={row.column}>
-                  <option value=''>Select Column</option>
+                  <option value=''></option>
                   { fields }
                 </select>
               </td>
               <td>
                 <select name="query" onChange={this.handleRowQueryChange(idx)} value={row.query}>
-                  <option value="">Select</option>
+                  <option value=""></option>
                   { operator }
                 </select>
               </td>
@@ -141,7 +141,7 @@ class DataTableFilter extends React.Component {
                 />
               </td>
               <td>
-                <StyledButton className="close" onClick={this.handleRemoveRow(idx)}>
+                <StyledButton title="Delete" className="close" onClick={this.handleRemoveRow(idx)}>
                   <span aria-hidden="true">×</span>
                 </StyledButton>
               </td>
@@ -150,7 +150,7 @@ class DataTableFilter extends React.Component {
           </tbody>
         </table>
         <a className="add-filter" onClick={this.handleAddRow}>+ Add Filter</a>
-        <StyledButton color="primary" className="btn btn-primary" type="button" onClick={this.handleSubmit}>Apply Filters</StyledButton>
+        <StyledButton className="btn btn-primary">Apply Filters</StyledButton>
       </Wrapper>
     );
   }

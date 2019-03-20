@@ -2,48 +2,11 @@ import React from 'react'
 import Wrapper from './Wrapper'
 import StyledButton from '../Button';
 
-const columns = [
-  {
-    name: "Name",
-    value: "name"
-  },
-  {
-    name: "Age",
-    value: "age"
-  },
-  {
-    name: "Disposition",
-    value: "disposition"
-  }
-];
-
-const operators = [
-  {
-    "name": "Contains",
-    "value": "contains"
-  },
-  {
-    "name": "Equal to",
-    "value": "equal"
-  },
-  {
-    "name": "Not equal to",
-    "value": "notequal"
-  },
-  {
-    "name": "Greater than",
-    "value": "greater"
-  },
-  {
-    "name": "Less than",
-    "value": "less"
-  }
-];
-
 class DataTableFilter extends React.Component {
+
   constructor(props) {
     super(props);
-
+    
     this.state = {
       rows: [{ column: "", query: "", value: "" }]
     };
@@ -97,6 +60,7 @@ class DataTableFilter extends React.Component {
   };
 
   render() {
+    const { columns, operators } = this.props;
     const fields = columns.map((col) => {
       return <option value={`${col.value}`}>{`${col.name}`}</option>
     })

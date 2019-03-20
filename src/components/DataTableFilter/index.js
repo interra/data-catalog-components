@@ -1,23 +1,53 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import Wrapper from './Wrapper'
 import StyledButton from '../Button';
 
+const columns = [
+  {
+    name: "Name",
+    value: "name"
+  },
+  {
+    name: "Age",
+    value: "age"
+  },
+  {
+    name: "Disposition",
+    value: "disposition"
+  }
+];
+
+const operators = [
+  {
+    "name": "Contains",
+    "value": "contains"
+  },
+  {
+    "name": "Equal to",
+    "value": "equal"
+  },
+  {
+    "name": "Not equal to",
+    "value": "notequal"
+  },
+  {
+    "name": "Greater than",
+    "value": "greater"
+  },
+  {
+    "name": "Less than",
+    "value": "less"
+  }
+];
 
 class DataTableFilter extends React.Component {
   constructor(props) {
     super(props);
-
-    const fields = props.columns.map((col) => {
-      return <option value={`${col.value}`}>{`${col.name}`}</option>
-    })
-    const operator = props.query.map((op) => {
-      return <option value={`${op.value}`}>{`${op.name}`}</option>
-    })
-
     this.state = {
-      rows: [{"column": "", "query": "", "value": ""}]
+      rows: [{ column: "", query: "", value: "" }]
     };
-    console.log(this.state.rows);
+    
   }
 
   handleRowValueChange = idx => evt => {
@@ -37,7 +67,7 @@ class DataTableFilter extends React.Component {
 
   handleRemoveRow = idx => () => {
     this.setState({
-      rows: this.state.shareholders.filter((s, sidx) => idx !== sidx)
+      rows: this.state.rows.filter((s, sidx) => idx !== sidx)
     });
   };
 
@@ -47,6 +77,13 @@ class DataTableFilter extends React.Component {
   };
 
   render() {
+    const fields = columns.map((col) => {
+      return <option value={`${col.value}`}>{`${col.name}`}</option>
+    })
+    const operator = operators.map((op) => {
+      return <option value={`${op.value}`}>{`${op.name}`}</option>
+    })
+    //console.log(fields);
     return (
       <Wrapper>
           <form>
@@ -64,13 +101,13 @@ class DataTableFilter extends React.Component {
                   <tr>
                     <td>
                       <select defaultValue={row.column}>
-                        <option value=""></option>
+                        <option value="">Select</option>
                         { fields }
                       </select>
                     </td>
                     <td>
                       <select defaultValue={row.query}>
-                        <option value=""></option>
+                        <option value="">Select</option>
                         { operator }
                       </select>
                     </td>

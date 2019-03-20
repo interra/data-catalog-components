@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  form {
-      width: 100%;
-  }
+const Wrapper = styled.form`
+  width: 100%;
   table {
       width: 100%;
   }
   .btn-primary {
     float: right;
+  }
+  .close {
+    padding: 0;
   }
   a.add-filter {
     cursor: pointer;

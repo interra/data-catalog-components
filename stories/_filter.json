@@ -16,23 +16,47 @@
   "operators": [
     {
       "name": "Contains",
-      "value": "contains"
+      "value": " LIKE "
     },
     {
       "name": "Equal to",
-      "value": "equal"
+      "value": " = "
     },
     {
       "name": "Not equal to",
-      "value": "notequal"
+      "value": " != "
+    },
+    {
+      "name": "Is empty",
+      "value": " IS NULL "
+    },
+    {
+      "name": "Is not empty",
+      "value": " IS NOT NULL "
     },
     {
       "name": "Greater than",
-      "value": "greater"
+      "value": " > "
+    },
+    {
+      "name": "Greater than or equal to",
+      "value": " >= "
     },
     {
       "name": "Less than",
-      "value": "less"
+      "value": " < "
+    },
+    {
+      "name": "Less than or equal to",
+      "value": " <= "
+    },
+    {
+      "name": "Sort by",
+      "value": " sort by "
+    },
+    {
+      "name": "Order by",
+      "value": " order by "
     }
   ]
 }

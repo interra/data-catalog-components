@@ -45,6 +45,7 @@ storiesOf('General', module)
     .add('Download Button', () => <StyledButton color="primary"><i class="fa fa-download"></i> download</StyledButton>)
     .add('Hero Button', () => <StyledButton className="btn-hero" onClick="">Learn More</StyledButton>)
     .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
+    .add('Toggle Button', () => <StyledButton className="toggle">Show Filters</StyledButton>)
 
 storiesOf('Home', module)
     .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)

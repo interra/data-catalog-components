@@ -21,14 +21,25 @@ const Wrapper = styled.div`
     justify-content: center;
   }
   li {
+    display: flex;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
+    a {
+      width: 100%;
+      flex: 1 0 auto;
+    }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media all and (min-width: 1200px) {
     li {
-      max-width: 25%;
+      width: 33.33%;
+    }
+  }
+  @media all and (min-width: 769px) and (max-width : 1199px) {
+    li {
+      width: 50%;
     }
   }
 `;

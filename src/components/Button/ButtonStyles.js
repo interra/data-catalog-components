@@ -43,6 +43,14 @@ const ButtonStyles = css`
     color: #000;
     padding: 10px;
   }
+  &.toggle {
+    margin: 1rem 0 0 0;
+    border-radius: 4px;
+    padding: 4px 8px 2px;
+    font-size: 12px;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
 `;
 
 export default ButtonStyles;

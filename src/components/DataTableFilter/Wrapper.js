@@ -28,13 +28,17 @@ const Wrapper = styled.form`
     }
   }
   .options {
-    float: right;
     .form-check {
       display: inline;
       padding: 0 2rem;
       input {
         margin: 3px 0 0 -20px;
       }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .options {
+      float: right;
     }
   }
 `;

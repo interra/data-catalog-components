@@ -28,6 +28,7 @@ import Text from '../src/components/Text';
 import Title from '../src/components/Title';
 import Table from '../src/components/Table';
 import Tags from '../src/components/Tags';
+import FormatIcon from '../src/components/FormatIcon';
 
 import data from './_data.json';
 import home from './_home.json';
@@ -76,6 +77,7 @@ storiesOf('Footer', module)
     .add('Footer Custom', () => <FooterCustom />)
 
 storiesOf('Dataset', module)
+  .add('Format Icon', () => <FormatIcon />)
   .add('File Download', () => <FileDownload label="Label" resource={data.distribution[0]} />)
   .add('File Download - No label', () => <FileDownload resource={data.distribution[0]} />)
   .add('Organization', () => <Organization name={data.publisher.name} description={data.publisher.description} identifier={data.publisher.identifier} />)

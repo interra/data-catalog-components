@@ -35,6 +35,13 @@ const defaultTheme = {
   warning: "#FEC108",
   danger: "#DB3545",
   success: "#28A645",
+  // Format
+  csvIcon: "#dfb100",
+  rdfIcon: "#0b4498",
+  jsonIcon: "#ef7100",
+  pdfIcon: "#e0051e",
+  xmlIcon: "#5e962c",
+  dataIcon: "#666666"
 };
 
 export default defaultTheme;

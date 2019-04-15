@@ -13,12 +13,8 @@
     "lib": "npm run clean && babel src -d lib",
     "clean": "rm -rf lib && mkdir lib",
     "prepublish": "npm run lib",
-<<<<<<< HEAD
-    "storybook": "NODE_PATH=src start-storybook -p 6006"
-=======
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_PATH=src start-storybook -p 6006",
     "deploy-storybook": "storybook-to-ghpages"
->>>>>>> a834477... Adds github pages integration
   },
   "keywords": [
     "react",

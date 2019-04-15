@@ -1,13 +1,13 @@
 const defaultTheme = {
   backgroundColor: "#f9fafb",
-  borderColor: "#A4B9C6",
-  primaryDark: "#005489", // blueDark.
+  borderColor: "#dce4ef",
+  primaryDark: "#112e51", // blueDark.
   primary: "#0978bc", // blue.
   primaryLight: "#27AAE1", // blueLight.
-  primaryDust: "#F4F9FB", // blueDust.
+  primaryDust: "#dce4ef", // blueDust.
   secondaryDark: "#dfb100", // yellowDark.
-  secondary: "#FFD666", // yellow.
-  secondaryLight: "#fff8e4", // yellowLight.
+  secondary: "#f9c642", // yellow.
+  secondaryLight: "#fff1d2", // yellowLight.
   grayDark: "#323A45",
   grayMedium: "#A7AAAC",
   grayLight: "#dddddd",

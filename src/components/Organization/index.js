@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   padding: 1em;
   position: relative;
   text-align: center;
-  border: 1px solid #A4B9C6;
+  border: 1px solid ${props => props.theme.borderColor};
   margin-bottom: 32px;
   background: #fff;
   img {

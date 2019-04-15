@@ -71,10 +71,10 @@ const Wrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       border-radius: 100%;
-      border: 1px solid ${props => props.theme.borderColor};
+      border: 1px solid ${props => props.theme.primaryDust};
       line-height: 50px;
       font-size: 20px;
-      color: ${props => props.theme.borderColor};
+      color: ${props => props.theme.primaryDark};
       text-align: center;
     }
   }

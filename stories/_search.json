@@ -36,43 +36,6 @@
                     "link": "url"
                 }
             ]
-        },
-        {
-            "identifier": 5678,
-            "title": "U.S. Tobacco Usage Statistics",
-            "description": "Statistics on U.S. smoking rates and tobacco taxation rates for all fifty states. *Source:* Centers for Disease Control and Prevention, 2015 https://www.cdc.gov/tobacco/data_statistics/state_data/ [1] ",
-            "modified": "2/12/2018",
-            "publisher": "Publish Inc.",
-            "format": [
-                {
-                  "identifier": 1,
-                  "format": "csv"
-                },
-                { "identifier":2,
-                  "format": "json"
-                },
-                { "identifier":3,
-                  "format": "pdf"
-                },
-                { "identifier":4,
-                  "format": "rdf"
-                },
-                { "identifier":5,
-                  "format": "xml"
-                },
-                { "identifier":6,
-                  "format": "data"
-                }
-            ],
-            "ref": "dataset/how",
-            "theme": [
-                {
-                    "identifier": 1,
-                    "title": "Healthcare",
-                    "icon": "physician",
-                    "link": "url"
-                }
-            ]
         }
     ],
     "facets": {

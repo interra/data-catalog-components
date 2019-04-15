@@ -16,9 +16,9 @@ function Text(props) {
   const text = props.value ?  parser.parse(props.value) : '';
 
   return (
-    <Wrapper className="dataset-body" style={{ fontSize: '1.6rem' }}>
+    <>
       {label} {text}
-    </Wrapper>
+    </>
   );
 }
 

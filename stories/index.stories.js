@@ -48,8 +48,8 @@ storiesOf('General', module)
 storiesOf('Home', module)
     .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)
     .add('Topics List - internal images', () => <IconList items={home.topics2} paneTitle="Section Title" component={IconListItem} className="icon-list" />)
-    .add('Hero', () => <Hero />)
-    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />)
+    .add('Hero', () => <Hero image="https://images.pexels.com/photos/355288/pexels-photo-355288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />)
+    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />) 
     .add('Step Blocks', () => <Blocks items={home.api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)
 
 
@@ -57,12 +57,26 @@ const selectedFacets = search.selectedFacets;
 const facetsResults = search.facetsResults;
 const query = search.query;
 const facets = search.facets;
+//const facetCallback = search.facetCallback;
+
+const facetCallback =
+  this.setState({
+    show: true,
+    items: [{
+      title: "loading",
+      description: "loading"
+    }]
+  });
+  this.fetchData();
+
 
 const facetListProps = {
   query,
   facets,
   facetsResults,
   selectedFacets,
+  facetCallback,
+  Link,
   url: "search"
 };
 

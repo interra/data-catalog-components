@@ -33,8 +33,6 @@ const ButtonStyles = css`
     &:hover,
     &:focus {
       background: white;
-      transform: translateY(-3px);
-      box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
     }
   }
 

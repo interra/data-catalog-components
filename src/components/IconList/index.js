@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 
@@ -18,14 +18,25 @@ function IconList(props) {
       content = (<ComponentToRender />);
   }
 
-  return (
+  if (props.paneTitle) {
+    return (
       <Wrapper className="container-fluid">
-      <h2 className="pane-title">{ paneTitle }</h2>
+        <h2 className="pane-title">{ props.paneTitle }</h2>
         <ul className={ className }>
           {content}
         </ul>
       </Wrapper>
-  );
+    );
+  }
+  else {
+    return (
+      <Wrapper className="container-fluid">
+        <ul className={ className }>
+          {content}
+        </ul>
+      </Wrapper>
+    );
+  }
 }
 
 IconList.defaultProps = {

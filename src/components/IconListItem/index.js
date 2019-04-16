@@ -11,7 +11,7 @@ class IconListItem extends React.PureComponent {
     if (item.icon) {
       // Image provided as a url.
       content = (
-        <StyledLink href={item.identifier}>
+        <StyledLink href={item.ref}>
           <img src={item.icon} alt={item.alt} />
           <div>{item.title}</div>
         </StyledLink>
@@ -20,7 +20,7 @@ class IconListItem extends React.PureComponent {
     else {
       // Image provided by custom component.
       content = ( 
-        <StyledLink href={item.identifier}>
+        <StyledLink href={item.ref}>
           <TopicImage title={item.title} width="80" height="80" fill={item.color} alt={this.props.alt} />
           <div>{item.title}</div>
         </StyledLink>

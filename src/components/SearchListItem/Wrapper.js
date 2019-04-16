@@ -25,6 +25,16 @@ const Wrapper = styled.div`
     letter-spacing: .25px;
     margin: 1em 0;
     padding-bottom: .75em;
+    div {
+      display: inline-block;
+      position: relative;
+      padding: 0 20px 0 25px;
+    }
+    img, svg {
+      position: absolute;
+      top:0;
+      left:0;
+    }
   }
   .format-types {
     display: flex;
@@ -38,7 +48,6 @@ const Wrapper = styled.div`
   .label {
     border-radius: 3px;
     color: white;
-    font-weight: bold;
     font-size: 1.4rem;
     line-height: 1.6rem;
     white-space: nowrap;
@@ -55,6 +64,7 @@ const Wrapper = styled.div`
   .label[data-format="rdf"],     
   .label[data-format="rdf+xml"] { background: ${props => props.theme.rdfIcon}; }
   .label[data-format="xml"]     { background: ${props => props.theme.xmlIcon}; }
+  .label[data-format="zip"]     { background: ${props => props.theme.zipIcon}; }
   .label[data-format="data"]    { background: ${props => props.theme.dataIcon}; }
 `;
 

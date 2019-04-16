@@ -29,6 +29,7 @@ import Title from '../src/components/Title';
 import Table from '../src/components/Table';
 import Tags from '../src/components/Tags';
 import FormatIcon from '../src/components/FormatIcon';
+import FontAwesomeIcon from '../src/components/FontAwesomeIcon';
 
 import data from './_data.json';
 import home from './_home.json';
@@ -44,6 +45,7 @@ storiesOf('General', module)
     .add('Download Button', () => <StyledButton color="primary"><i class="fa fa-download"></i> download</StyledButton>)
     .add('Hero Button', () => <StyledButton className="btn-hero" onClick="">Learn More</StyledButton>)
     .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
+    .add('FontAwesome Icons', () => <div><FontAwesomeIcon/><FontAwesomeIcon icon="facebook" fill="#617aad"/><FontAwesomeIcon icon="twitter" fill="#41b0d3"/></div>)
 
 storiesOf('Home', module)
     .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)

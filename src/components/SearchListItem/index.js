@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ListItem from '../ListItem';
 import Wrapper from './Wrapper';
 import excerpts from 'excerpts';
+import TopicImage from '../IconListItem/TopicImage'
 
 class SearchListItem extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
@@ -30,15 +31,22 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
     else {
       let i = 0;
       return theme.map(function(topic) {
+        console.log(topic);
         i++
-        const icon = topic.icon ? topic.icon : 'cog';
-        return <div key={`dist-${topic.identifier}-${i}`}>
-          <div
-            title={`theme: ${topic.title}`} key={`dist-id-${topic.identifier}-${i}`}
-            className={`font-icon-select-1 font-icon-select-1-${icon}`}>
-            </div>
+        // if (topic.icon) {
+        //   return <div key={`dist-${topic.identifier}-${i}`}>
+        //     <img src={topic.icon} height="16px" width="16px" alt={topic.alt} /> 
+        //     {topic.title}
+        //   </div>
+        // }
+        // else {
+          return <div key={`dist-${topic.identifier}-${i}`}>
+            <TopicImage title={topic.title} height="16" width="16" fill="#A7AAAC"/>
             {topic.title}
           </div>
+          
+        //}
+        
       })
     }
   }

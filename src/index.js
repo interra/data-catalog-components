@@ -7,6 +7,7 @@ export { default as Header } from "./components/Header";
 export { default as Footer } from "./components/Footer";
 export { default as StyledButton } from "./components/Button";
 export { default as FormatIcon } from "./components/FormatIcon";
+export { default as FontAwesomeIcon } from "./components/FontAwesomeIcon";
 export { default as InputLarge } from "./components/InputLarge";
 export { default as FacetList } from "./components/FacetList";
 export { default as FileDownload } from "./components/FileDownload";

@@ -1,7 +1,7 @@
 const defaultTheme = {
   backgroundColor: "#f9fafb",
   borderColor: "#dce4ef",
-  primaryDark: "#112e51", // blueDark.
+  primaryDark: "#162e51", // blueDark.
   primary: "#0978bc", // blue.
   primaryLight: "#27AAE1", // blueLight.
   primaryDust: "#dce4ef", // blueDust.
@@ -27,7 +27,7 @@ const defaultTheme = {
   heroBackgroundColor: "#0A77BD",
   heroTextColor: "#FFFFFF",
   heroHeadingColor: "#FFFFFF",
-  footerBackgroundColor: "#004466",
+  footerBackgroundColor: "#162e51",
   footerText: "#FFFFFF",
   footerLink: "#FFFFFF",
   footerLinkHover: "#afc0cc",
@@ -41,6 +41,7 @@ const defaultTheme = {
   jsonIcon: "#ef7100",
   pdfIcon: "#e0051e",
   xmlIcon: "#5e962c",
+  zipIcon: "1700b2",
   dataIcon: "#666666"
 };
 

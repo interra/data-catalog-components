@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 
 import IconList from '../src/components/IconList';
@@ -57,7 +57,7 @@ const selectedFacets = search.selectedFacets;
 const facetsResults = search.facetsResults;
 const query = search.query;
 const facets = search.facets;
-//const facetCallback = search.facetCallback;
+const facetCallback = search.facetCallback;
 
 const facetListProps = {
   query,
@@ -73,7 +73,7 @@ storiesOf('Search', module)
   .add('Item', () => <SearchListItem item={search.items[0]}/>)
   .add('List', () => <SearchList items={search.items} message="2 Datasets found" />)
   .add('Input Large', () => <InputLarge value={query} />)
-  //.add('Facet List', () => <FacetList {... facetListProps} />)
+  .add('Facet List', () => <Router><FacetList {... facetListProps} /></Router>)
 
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)

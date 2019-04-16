@@ -59,17 +59,6 @@ const query = search.query;
 const facets = search.facets;
 //const facetCallback = search.facetCallback;
 
-const facetCallback =
-  this.setState({
-    show: true,
-    items: [{
-      title: "loading",
-      description: "loading"
-    }]
-  });
-  this.fetchData();
-
-
 const facetListProps = {
   query,
   facets,
@@ -84,7 +73,7 @@ storiesOf('Search', module)
   .add('Item', () => <SearchListItem item={search.items[0]}/>)
   .add('List', () => <SearchList items={search.items} message="2 Datasets found" />)
   .add('Input Large', () => <InputLarge value={query} />)
-  .add('Facet List', () => <FacetList {... facetListProps} />)
+  //.add('Facet List', () => <FacetList {... facetListProps} />)
 
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)
@@ -104,7 +93,3 @@ storiesOf('Dataset', module)
   .add('Table 2', () => <Table configuration={tables.config2} data={tables.data2} title="What's in this Dataset?" th1="Rows" th2="Columns" tableclass="table-two" />)
   .add('Table 3', () => <Table configuration={tables.config3} data={tables.data3} title="Columns in this Dataset" th1="Column Name" th2="Type" tableclass="table-three" />)
   .add('Tags', () => <Tags label={"Tags"} tags={data.keyword} />)
-
-
-
-

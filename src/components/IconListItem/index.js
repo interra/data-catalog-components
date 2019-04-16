@@ -6,8 +6,7 @@ class IconListItem extends React.PureComponent {
 
   render() {
     const { item } = this.props;
-    let content = '';
-    let color = '#0A77BD';
+    let content = '';;
 
     if (item.icon) {
       // Image provided as a url.
@@ -22,7 +21,7 @@ class IconListItem extends React.PureComponent {
       // Image provided by custom component.
       content = ( 
         <StyledLink href={item.identifier}>
-          <TopicImage title={item.title} width="80" height="80" fill={color} />
+          <TopicImage title={item.title} width="80" height="80" fill={item.color} alt={this.props.alt} />
           <div>{item.title}</div>
         </StyledLink>
       )

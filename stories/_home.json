@@ -28,27 +28,33 @@
     "topics2": [
         {
             "identifier": "1",
-            "title": "City Planning"
+            "title": "City Planning",
+            "color": "#0A77BD"
         },
         {
             "identifier": "2",
-            "title": "Economy"
+            "title": "Economy",
+            "color": "#0A77BD"
         },
         {
             "identifier": "3",
-            "title": "Health Care"
+            "title": "Health Care",
+            "color": "#0A77BD"
         },
         {
             "identifier": "4",
-            "title": "Transportation"
+            "title": "Transportation",
+            "color": "#0A77BD"
         },
         {
             "identifier": "5",
-            "title": "Public Safety"
+            "title": "Public Safety",
+            "color": "#0A77BD"
         },
         {
             "identifier": "6",
-            "title": "Education"
+            "title": "Education",
+            "color": "#0A77BD"
         }
     ],
     "stats": [

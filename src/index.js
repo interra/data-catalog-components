@@ -1,4 +1,5 @@
 export { default as IconList } from "./components/IconList";
+export { default as IconListItem } from "./components/IconListItem";
 export { default as Hero } from "./components/Hero";
 export { default as SearchList } from "./components/SearchList";
 export { default as NavBar } from "./components/NavBar";

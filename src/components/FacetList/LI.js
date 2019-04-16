@@ -8,7 +8,7 @@ const LI = styled.li`
   position: relative;
   display: block;
   &:last-of-type {
-   border-bottom: 1px solid ${props => props.theme.grayLight};
+   border-bottom: 1px solid ${props => props.theme.borderColor};
  }
 `;
 

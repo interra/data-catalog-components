@@ -28,19 +28,27 @@
     "topics2": [
         {
             "identifier": "1",
-            "title": "Kilimanjaro"
+            "title": "City Planning"
         },
         {
             "identifier": "2",
-            "title": "Denali"
+            "title": "Economy"
         },
         {
             "identifier": "3",
-            "title": "Everest"
+            "title": "Health Care"
         },
         {
             "identifier": "4",
-            "title": "Rainier"
+            "title": "Transportation"
+        },
+        {
+            "identifier": "5",
+            "title": "Public Safety"
+        },
+        {
+            "identifier": "6",
+            "title": "Education"
         }
     ],
     "stats": [

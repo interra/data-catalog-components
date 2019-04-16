@@ -16,10 +16,9 @@ const StyledLink = styled.a`
   text-align: center;
   &.active,
   &:hover {
-    background-color: ${props => props.theme.secondaryLight};
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+    border-color: ${props => props.theme.primary};
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) !important;
     text-decoration: none;
-    transform: translateY(-3px);
   }
   img {
     max-width: 150px;

@@ -7,8 +7,8 @@ const FacetBlockDiv = styled.div`
     padding: 9px 16px;
     position: relative;
     display: block;
-    border-left: 1px solid ${props => props.theme.grayLight};
-    border-right: 1px solid ${props => props.theme.grayLight};
+    border-left: 1px solid ${props => props.theme.borderColor};
+    border-right: 1px solid ${props => props.theme.borderColor};
     color: ${props => props.theme.textColor};
     &:hover {
       text-decoration: none;

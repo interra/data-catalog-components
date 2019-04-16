@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 
 import IconList from '../src/components/IconList';
@@ -48,8 +48,8 @@ storiesOf('General', module)
 storiesOf('Home', module)
     .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)
     .add('Topics List - internal images', () => <IconList items={home.topics2} paneTitle="Section Title" component={IconListItem} className="icon-list" />)
-    .add('Hero', () => <Hero />)
-    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />)
+    .add('Hero', () => <Hero image="https://images.pexels.com/photos/355288/pexels-photo-355288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />)
+    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />) 
     .add('Step Blocks', () => <Blocks items={home.api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)
 
 
@@ -57,12 +57,15 @@ const selectedFacets = search.selectedFacets;
 const facetsResults = search.facetsResults;
 const query = search.query;
 const facets = search.facets;
+const facetCallback = search.facetCallback;
 
 const facetListProps = {
   query,
   facets,
   facetsResults,
   selectedFacets,
+  facetCallback,
+  Link,
   url: "search"
 };
 
@@ -70,7 +73,7 @@ storiesOf('Search', module)
   .add('Item', () => <SearchListItem item={search.items[0]}/>)
   .add('List', () => <SearchList items={search.items} message="2 Datasets found" />)
   .add('Input Large', () => <InputLarge value={query} />)
-  .add('Facet List', () => <FacetList {... facetListProps} />)
+  .add('Facet List', () => <Router><FacetList {... facetListProps} /></Router>)
 
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)
@@ -90,7 +93,3 @@ storiesOf('Dataset', module)
   .add('Table 2', () => <Table configuration={tables.config2} data={tables.data2} title="What's in this Dataset?" th1="Rows" th2="Columns" tableclass="table-two" />)
   .add('Table 3', () => <Table configuration={tables.config3} data={tables.data3} title="Columns in this Dataset" th1="Column Name" th2="Type" tableclass="table-three" />)
   .add('Tags', () => <Tags label={"Tags"} tags={data.keyword} />)
-
-
-
-

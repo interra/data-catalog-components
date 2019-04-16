@@ -7,7 +7,7 @@ const H3 = styled.h3`
   text-transform: uppercase;
   color: #323A45;
   letter-spacing: .5px;
-  border: 1px solid ${props => props.theme.borderColor};
+  border: 1px solid ${props => props.theme.primary};
   padding: 13px 16px;
   margin: 0;
 `;

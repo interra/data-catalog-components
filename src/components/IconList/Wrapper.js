@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   h2 {
     display: block;
     font-size: 20px !important;
-    letter-spacing: 7px;
     margin-bottom: 24px;
     text-align: center;
   }

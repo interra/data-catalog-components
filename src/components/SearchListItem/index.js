@@ -70,7 +70,7 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
           {description}
         </div>
         <div className="item-org">
-          <label>organization:</label> {item.publisher}
+          <strong>organization:</strong> {item.publisher}
         </div>
         <div className="format-types">
           {formats}

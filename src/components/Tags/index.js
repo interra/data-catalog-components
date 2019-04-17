@@ -67,11 +67,12 @@ function Tags(props) {
   `;
 
   const label = props.label ? <strong>{props.label}:</strong> : '';
-  const tags = props.tags.map((tag) => {
 
+  const tags = props.tags.map((tag) => {
+    const ref = `{${props.path}${tag.identifier}`;
     return (
       <div className="tag" key={tag.identifier}>
-        <a href={tag.identifier}> {tag.title} </a>
+        <a href={ref}> {tag.title} </a>
       </div>
     );
   }, '<div></div>');

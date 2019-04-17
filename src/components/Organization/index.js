@@ -34,7 +34,7 @@ function Organization(props) {
 
   return (
     <Wrapper>
-      <div className="org-image">{image}</div>
+      <div className="org-image" alt="Organization Logo">{image}</div>
       <h3 className="org-name"><a href={link}>{name}</a></h3>
       {description}
     </Wrapper>

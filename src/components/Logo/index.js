@@ -8,7 +8,7 @@ class Logo extends Component {
     render() {
         return (
           <Wrapper href="/" className="logo">
-            <img src={this.props.image} alt="Logo" />
+            <img src={this.props.image} alt="Open Data Catalog" />
           </Wrapper>
         );
     }

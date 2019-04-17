@@ -31,7 +31,6 @@ class SearchListItem extends React.PureComponent { // eslint-disable-line react/
     else {
       let i = 0;
       return theme.map(function(topic) {
-        console.log(topic);
         i++
         // if (topic.icon) {
         //   return <div key={`dist-${topic.identifier}-${i}`}>

@@ -24,3 +24,14 @@ To see the available components:
 ## Publish to Github Pages
 
 1) run `npm run prepublish; npm run deploy-storybook`
+
+## Testing Components without Updating NPM Package
+
+To test or use the components from a github branch:
+
+1) Create new branch locallly
+1) Remove `lib` from .gitignore
+1) Run `npm run lib`
+1) Push lib folder and .gitignore to your branch
+1) Add branch to package.json by running `npm install --save interra/data-catalog-components#MY-BRANCH`
+1) Profit

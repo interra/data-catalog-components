@@ -20,7 +20,7 @@ function IconList(props) {
 
   if (props.paneTitle) {
     return (
-      <Wrapper className="container-fluid">
+      <Wrapper className="container-fluid icon-container">
         <h2 className="pane-title">{ props.paneTitle }</h2>
         <ul className={ className }>
           {content}
@@ -30,7 +30,7 @@ function IconList(props) {
   }
   else {
     return (
-      <Wrapper className="container-fluid">
+      <Wrapper className="container-fluid icon-container">
         <ul className={ className }>
           {content}
         </ul>

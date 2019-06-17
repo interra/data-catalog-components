@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    padding: 0;
   }
   li {
     text-align: center;

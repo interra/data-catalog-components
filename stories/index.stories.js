@@ -9,15 +9,15 @@ import SearchList from '../src/components/SearchList';
 import SearchListItem from '../src/components/SearchListItem';
 import InputLarge from '../src/components/InputLarge';
 import FacetList from '../src/components/FacetList';
+import SearchInput from '../src/components/SearchInput';
 
 import Hero from '../src/components/Hero';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
-import FooterCustom from '../src/components/Footer/FooterCustom';
 import NavBar from '../src/components/NavBar';
 import Logo from '../src/components/Logo';
 import StyledButton from '../src/components/Button';
-import Pagination from '../src/components/Pagination';
+import PageHeader from '../src/components/PageHeader';
 import Blocks from '../src/components/Blocks';
 import StepsBlock from '../src/components/Blocks/StepsBlock';
 import StatBlock from '../src/components/Blocks/StatBlock';
@@ -39,20 +39,23 @@ import search from './_search.json';
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
     .add('Header', () => <Header/>)
+    .add('Page Heading', () => <PageHeader title="Datasets" />)
     .add('NavBar', () => <NavBar />)
     .add('Button', () => <StyledButton color="primary">primary</StyledButton>)
-    .add('Preview Button', () => <StyledButton color="primary"><i class="fa fa-bar-chart"></i> preview</StyledButton>)
-    .add('Download Button', () => <StyledButton color="primary"><i class="fa fa-download"></i> download</StyledButton>)
-    .add('Hero Button', () => <StyledButton className="btn-hero" onClick="">Learn More</StyledButton>)
-    .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true">×</span></StyledButton>)
-    .add('FontAwesome Icons', () => <div><FontAwesomeIcon/><FontAwesomeIcon icon="facebook" fill="#617aad"/><FontAwesomeIcon icon="twitter" fill="#41b0d3"/></div>)
+    .add('Preview Button', () => <StyledButton color="primary"><FontAwesomeIcon icon="chart-bar" fill="#ffffff"/> Preview</StyledButton>)
+    .add('Download Button', () => <StyledButton color="primary"><FontAwesomeIcon icon="download" fill="#ffffff"/> Download</StyledButton>)
+    .add('Hero Button', () => <StyledButton className="btn-hero">Learn More</StyledButton>)
+    .add('Close Button', () => <StyledButton className="close"><span aria-hidden="true"><FontAwesomeIcon icon="times" fill="#666666"/></span></StyledButton>)
+    .add('FontAwesome Icons', () => <div><FontAwesomeIcon/><FontAwesomeIcon icon="facebook" fill="#617aad"/><FontAwesomeIcon icon="twitter" fill="#41b0d3"/><FontAwesomeIcon icon="chevron-right" fill="red"/></div>)
 
 storiesOf('Home', module)
     .add('Topics List - external images', () => <IconList items={home.topics} paneTitle="Dataset Topics" component={IconListItem} className="icon-list" />)
     .add('Topics List - internal images', () => <IconList items={home.topics2} paneTitle="Section Title" component={IconListItem} className="icon-list" />)
-    .add('Hero', () => <Hero image="https://images.pexels.com/photos/355288/pexels-photo-355288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />)
-    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} />) 
-    .add('Step Blocks', () => <Blocks items={home.api} component={StepsBlock} paneTitle="Getting Started with Open Data" />)
+    .add('Hero with image', () => <Hero image="https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />)
+    .add('Hero without image', () => <Hero  />)
+    .add('Basic Blocks', () => <Blocks items={home.basic} />) 
+    .add('Stat Blocks', () => <Blocks items={home.stats} component={StatBlock} className="StatBlock" />) 
+    .add('Step Blocks', () => <Blocks items={home.api} component={StepsBlock} className="StepsBlock" paneTitle="Getting Started with Open Data" />)
 
 
 const selectedFacets = search.selectedFacets;
@@ -76,10 +79,10 @@ storiesOf('Search', module)
   .add('List', () => <SearchList items={search.items} message="2 Datasets found" />)
   .add('Input Large', () => <InputLarge value={query} />)
   .add('Facet List', () => <Router><FacetList {... facetListProps} /></Router>)
+  .add('Search Input', () => <SearchInput className="front-page-search" placeholder="Search the data" />)
 
 storiesOf('Footer', module)
     .add('Footer', () => <Footer />)
-    .add('Footer Custom', () => <FooterCustom />)
 
 storiesOf('Dataset', module)
   .add('Format Icon', () => <FormatIcon />)

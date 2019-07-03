@@ -16,9 +16,12 @@ const StyledLink = styled.a`
   text-align: center;
   &.active,
   &:hover {
-    border-color: ${props => props.theme.primary};
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) !important;
+    background-color: ${props => props.theme.secondaryLight};
     text-decoration: none;
+    color: ${props => props.theme.primaryDark}
+    svg path {
+      fill: ${props => props.theme.primaryDark}
+    }
   }
   img {
     max-width: 150px;

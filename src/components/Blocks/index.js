@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StepsBlock from './StepsBlock';
-import StatBlock from './StatBlock';
 import Wrapper from './Wrapper';
-
+import BasicBlock from './BasicBlock';
 
 class Blocks extends React.PureComponent {
 
@@ -14,12 +12,12 @@ class Blocks extends React.PureComponent {
 
     if (paneTitle) {
       return (
-        <Wrapper className={'container-fluid ' + this.props.component.name}>
+        <Wrapper className={'container ' + this.props.className}>
           <h2>{paneTitle}</h2>
           <div className="pane-content">
             {
-              this.props.items.map(function(item){
-                return <Block content={item} />;
+              this.props.items.map(function(item, index){
+                return <Block content={item} key={index} />;
               })
             }
           </div>
@@ -28,12 +26,12 @@ class Blocks extends React.PureComponent {
     }
     else {
       return (
-        <Wrapper className={'container-fluid ' + this.props.component.name}>
+        <Wrapper className={'container ' + this.props.className}>
 
           <div className="pane-content">
             {
-              this.props.items.map(function(item){
-                return <Block content={item} />;
+              this.props.items.map(function(item, index){
+                return <Block content={item} key={index} />;
               })
             }
           </div>
@@ -45,11 +43,14 @@ class Blocks extends React.PureComponent {
 
 Blocks.defaultProps = {
   items: [],
+  component: BasicBlock,
+  className: 'BasicBlock'
 };
 
 Blocks.propTypes = {
-  items: PropTypes.any,
-  component: PropTypes.string,
+  items: PropTypes.array,
+  component: PropTypes.func.isRequired,
+  className: PropTypes.string
 };
 
 export default Blocks

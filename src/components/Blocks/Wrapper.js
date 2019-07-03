@@ -21,6 +21,15 @@ const Wrapper = styled.div`
     margin: 0;
   }
 
+  &.BasicBlock {
+    h2 {
+      padding-bottom: 1.6rem;
+    }
+    .basic-block {
+      padding: 0 20px;
+      min-width: 33%;
+    }
+  }
   &.StatBlock {
     background-color: ${props => props.theme.primaryLight};
     color: #ffffff;

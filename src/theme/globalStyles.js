@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${defaultTheme.textColor};
     font-weight: 300;
     font-size: 1.6rem;
-    font-family: 'Rubik', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: ${defaultTheme.fontText};
 
     a, input, button, textarea {
       transition: all 0.2s linear;
@@ -27,7 +27,10 @@ const GlobalStyles = createGlobalStyle`
         color: ${defaultTheme.linkHoverColor};
       }
     }
-    h1,h2,h3,h4,h5 { color: ${defaultTheme.headingColor}; }
+    h1,h2,h3,h4,h5 { 
+      color: ${defaultTheme.headingColor};
+      font-family: ${defaultTheme.fontText};
+    }
     h1 { font-size: 3.0rem }  // 30px
     h2 { font-size: 2.4rem; } // 24px
     h3 { font-size: 2.0rem; } // 20px

@@ -3,14 +3,14 @@ import Wrapper from './Wrapper';
 
 class Logo extends Component {
 
-  const
-
     render() {
-        return (
-          <Wrapper href="/" className="logo">
-            <img src={this.props.image} alt="Open Data Catalog" />
-          </Wrapper>
-        );
+      let logo = this.props.image ? this.props.image : {image}
+
+      return (
+        <Wrapper href="/" className="logo">
+          <img src={logo} alt="Open Data Catalog" />
+        </Wrapper>
+      );
     }
 
 }

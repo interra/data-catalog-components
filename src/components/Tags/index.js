@@ -13,54 +13,17 @@ function Tags(props) {
     .tag {
       margin: 5px;
       a {
-        padding: 2px 10px 2px;
-        line-height: 2.0rem;
-        border-radius: 0 5px 5px 0;
-        background-color: #F3F3F3;
-        margin: 3px 5px 3px 20px;
+        border: 1px solid ${props => props.theme.borderColor};
+        border-radius: 15px;
+        background-color: ${props => props.theme.grayDust};
+        color: ${props => props.theme.grayDark};
+        padding: 4px 10px;
         position: relative;
-        color: #333333;
-        border: 1px solid #ddd;
-        border-left: 0;
-        z-index: 2;
-        transition: 0;
-        &:before {
-          content: "";
-          width: 2px;
-          height: 2px;
-          background: #777777;
-          position: absolute;
-          top: 11px;
-          left: -5px;
-          border-radius: 0;
-        }
-        &:after {
-          content: "";
-          width: 20px;
-          height: 20px;
-          background-color: #F3F3F3;
-          transform: rotate(45deg);
-          border-radius: 2px;
-          position: absolute;
-          top: 2px;
-          left: -9px;
-          z-index: -1;
-          border: 1px solid #ddd;
-          border-top: none;
-          border-right: none;
-          transition: 0;
-        }
+
         &:hover {
           background: #fff;
           color: #000;
           text-decoration: none;
-          transition: 0;
-        }
-        &:hover:after {
-          background: #fff;
-          color: #000;
-          text-decoration: none;
-          transition: 0;
         }
       }
     }
@@ -69,7 +32,7 @@ function Tags(props) {
   const label = props.label ? <strong>{props.label}:</strong> : '';
 
   const tags = props.tags.map((tag) => {
-    const ref = `{${props.path}${tag.identifier}`;
+    const ref = `{${props.path}${tag.title}`;
     return (
       <div className="tag" key={tag.identifier}>
         <a href={ref}> {tag.title} </a>

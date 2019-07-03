@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   .container-fluid {
     display: flex;
     align-items: flex-start;
-    align-content: stretch;
+    align-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -19,25 +19,42 @@ const Wrapper = styled.div`
     }
     a {
       color: ${props => props.theme.footerLink};
-      text-decoration: underline;
+      text-decoration: none;
       &:hover,
       &:focus {
         color: ${props => props.theme.footerLinkHover};
+        text-decoration: underline;
       }
     }
   }
  
   ul {
     list-style-type: none;
-    float: left;
     list-style: none;
-    margin: 0 40px 0 0;
+    margin: 20px 40px 0 0;
     padding: 0;
+    a {
+      display: block;
+      font-weight: 500;
+      padding: 4px;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
     .container {
       flex-wrap: wrap;
+      nav {
+        display: block;
+        width: 100%;
+        ul {
+          margin-right: 0;
+        }
+      }
     }
     .copyright {
       margin-top: 30px;

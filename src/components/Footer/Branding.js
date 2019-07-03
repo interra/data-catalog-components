@@ -8,17 +8,11 @@ const Branding = styled.div`
     font-size: 30px;
     margin: 20px 0 5px;
   }
-  img {
-    width: 90px;
-    float: left;
-    margin-right: 20px !important;
-    opacity: 0.3;
-  }
   p {
     margin: 0 2em 1em 0;
   }
   .social {
-    margin: 0 0 1em 110px;
+    margin: 1em 0;
     i {
       font-size: 25px;
       opacity: 0.3;

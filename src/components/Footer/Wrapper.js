@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     h2,h3,h4 {
       color: ${props => props.theme.footerText};

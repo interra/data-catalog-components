@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 import Copyright from '../Copyright';
 import Menu from '../Menu';
-import links from '../../../stories/_menu.json';
 import Branding from './Branding';
 
 class Footer extends React.Component {
 
   render() {
+    const menu1 = this.props.links ? <Menu items={this.props.links.footer1} /> : null;
+    const menu2 = this.props.links ? <Menu items={this.props.links.footer2} /> : null;
 
     return (
       <Wrapper className="page-footer">
@@ -25,8 +26,8 @@ class Footer extends React.Component {
               <i className="fa fa-github" aria-hidden="true" />
             </div>
           </Branding>
-          <Menu items={links.footer1} />
-          <Menu items={links.footer2} />
+          {menu1}
+          {menu2}
         </div>
       </Wrapper>
     );
@@ -40,6 +41,7 @@ Footer.defaultProps = {
 Footer.propTypes = {
     state: PropTypes.string,
     item: PropTypes.any,
+    links: PropTypes.object
 };
 
 export default Footer;

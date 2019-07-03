@@ -35,6 +35,7 @@ import data from './_data.json';
 import home from './_home.json';
 import tables from './_tables.json';
 import search from './_search.json';
+import links from './_menu.json';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
@@ -82,7 +83,7 @@ storiesOf('Search', module)
   .add('Search Input', () => <SearchInput className="front-page-search" placeholder="Search the data" />)
 
 storiesOf('Footer', module)
-    .add('Footer', () => <Footer />)
+    .add('Footer', () => <Footer links={links} />)
 
 storiesOf('Dataset', module)
   .add('Format Icon', () => <FormatIcon />)

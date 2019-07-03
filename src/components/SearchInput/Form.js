@@ -30,26 +30,26 @@ export default styled.form`
   button[type="submit"] {
     top: 0;
     right: 0;
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.secondary};;
     border-radius: 24px;
     border-style: none;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: bold;
     display: inline-block;
     height: 48px;
     margin: 0;
     padding: 10px 0;
-    color: #FFFFFF;
+    color: ${props => props.theme.primaryDark};
     width: 100px;
     svg {
       padding-top: 3px;
       vertical-align: top;
       path {
-        fill: #ffffff;
+        fill: ${props => props.theme.primaryDark};
       }
     }
     &:hover {
-      background-color: ${props => props.theme.primaryDark};
+      background-color: ${props => props.theme.secondaryDark};
     }
   }
 

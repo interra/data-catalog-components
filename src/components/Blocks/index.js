@@ -12,7 +12,7 @@ class Blocks extends React.PureComponent {
 
     if (paneTitle) {
       return (
-        <Wrapper className={'container ' + this.props.className}>
+        <Wrapper className={'container-fluid ' + this.props.className}>
           <h2>{paneTitle}</h2>
           <div className="pane-content">
             {
@@ -26,7 +26,7 @@ class Blocks extends React.PureComponent {
     }
     else {
       return (
-        <Wrapper className={'container ' + this.props.className}>
+        <Wrapper className={'container-fluid ' + this.props.className}>
 
           <div className="pane-content">
             {

@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from "react-router-dom";
 import { Button, FormGroup, Label, Input  } from 'reactstrap';
 import FontAwesomeIcon from '../FontAwesomeIcon';
-//import Search from "../../Search"
 import Form from './Form';
 
 
@@ -44,11 +43,11 @@ class SearchInput extends React.Component {
   }
 
   render() {
-    //const search = <Search />
 
     const {query} = this.state;
-    const placeholder = this.props.placeholder ? this.props.placeholder : "Search";
+    const placeholder = this.props.placeholder ? this.props.placeholder : "Search the Data";
     const className = this.props.className ? this.props.className : "";
+    const search = this.props.component ? this.props.component : null;
     
     let reset = this.state.textEntered 
       ? <Button type="reset" id="reset" onClick={ this.handleReset }>
@@ -57,8 +56,7 @@ class SearchInput extends React.Component {
       : false;
 
     if (this.state.navigate === true) {
-      //return <Redirect to={`/search?q=${query}`} component={search} />
-      return ''
+      return <Redirect to={`/search?q=${query}`} component={search} />
     }
 
     return (

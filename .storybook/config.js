@@ -2,7 +2,7 @@ import { configure } from '@storybook/react';
 
 import { addDecorator } from '@storybook/react';
 import React from 'react';
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import GlobalStyles from '../src/theme/globalStyles';
 import Theme from '../src/theme/default'
 import { ThemeProvider } from 'styled-components'
@@ -13,7 +13,9 @@ function withGlobalStyles(storyFn) {
     <React.Fragment>
       <GlobalStyles />
       <ThemeProvider theme={Theme}>
-        {storyFn()}
+        <Router>
+          {storyFn()}
+        </Router>
       </ThemeProvider>
     </React.Fragment>
   );

@@ -39,7 +39,7 @@ import links from './_menu.json';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
-    .add('Header', () => <Header/>)
+    .add('Header', () => <Header site="Open Data Catalog" slogan="Place your tag line here." />)
     .add('Page Heading', () => <PageHeader title="Datasets" />)
     .add('NavBar', () => <NavBar />)
     .add('Button', () => <StyledButton color="primary">primary</StyledButton>)

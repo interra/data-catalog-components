@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import { NavLink as RRlink } from 'react-router-dom';
 import {
   Collapse,
@@ -26,7 +25,7 @@ export default class NavBar extends React.Component {
   }
   render() {
     return (
-      <Router>
+
         <Wrapper className="main-navigation">
           <Navbar expand="md navbar-dark">
             <NavbarToggler onClick={this.toggle} />
@@ -48,7 +47,7 @@ export default class NavBar extends React.Component {
             </Collapse>
           </Navbar>
         </Wrapper>
-      </Router>
+
     );
   }
 }

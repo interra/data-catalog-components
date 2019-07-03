@@ -6,8 +6,8 @@ const defaultTheme = {
   primaryLight: "#27AAE1", // blueLight.
   primaryDust: "#dce4ef", // blueDust.
   secondaryDark: "#dfb100", // yellowDark.
-  secondary: "#f9c642", // yellow.
-  secondaryLight: "#FFFACD", // yellowLight.
+  secondary: "#FFD666", // yellow.
+  secondaryLight: "#FFF8E4", // yellowLight.
   grayDark: "#323A45",
   grayMedium: "#A7AAAC",
   grayLight: "#dddddd",

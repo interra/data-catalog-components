@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
-import StyledButton from '../Button';
 import defaultTheme from '../../theme/default'
+import SearchInput from '../SearchInput'
 
 class Hero extends React.Component {
 
@@ -17,7 +17,7 @@ class Hero extends React.Component {
         <div className={'block ' + Align}>
           <h1 className="hero-title">{this.props.title}{this.props.title2}</h1>
           <p>{this.props.intro}</p>
-          <StyledButton href="/about" className="btn-hero"><a href="/about">Learn more</a></StyledButton>
+          <SearchInput/>
         </div>
       </Wrapper>
     );

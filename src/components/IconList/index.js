@@ -5,7 +5,6 @@ import Wrapper from './Wrapper';
 function IconList(props) {
   const ComponentToRender = props.component;
   let content = (<div></div>);
-  const paneTitle = props.paneTitle;
   const className = props.className;
 
   // If we have items, render them

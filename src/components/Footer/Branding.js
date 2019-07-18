@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Branding = styled.div`
-  flex-grow: 1.5;
-  max-width: 560px;
+  flex-grow: 2;
+  max-width: 50%;
   h3 {
     font-weight: 500;
     font-size: 30px;

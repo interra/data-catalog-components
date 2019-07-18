@@ -5,14 +5,15 @@ const Wrapper = styled.div`
   color: ${props => props.theme.footerText};
   padding: 40px 0;
 
-  .container,
-  .container-fluid {
+  .page-footer {
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 
     h2,h3,h4 {
       color: ${props => props.theme.footerText};
@@ -27,7 +28,6 @@ const Wrapper = styled.div`
       }
     }
   }
- 
   ul {
     list-style-type: none;
     list-style: none;
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    .container {
+    .page-footer {
       flex-wrap: wrap;
       nav {
         display: block;

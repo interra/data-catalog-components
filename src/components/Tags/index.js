@@ -17,10 +17,10 @@ function Tags(props) {
         border-radius: 15px;
         background-color: ${props => props.theme.grayDust};
         color: ${props => props.theme.grayDark};
-        padding: 4px 10px;
+        padding: 4px 12px;
         position: relative;
-
-        &:hover {
+        &:hover,
+        &:focus {
           background: #fff;
           color: #000;
           text-decoration: none;
@@ -30,12 +30,11 @@ function Tags(props) {
   `;
 
   const label = props.label ? <strong>{props.label}:</strong> : '';
-
   const tags = props.tags.map((tag) => {
-    const ref = `{${props.path}${tag.title}`;
+    const ref = `{${props.path}${tag.data}`;
     return (
       <div className="tag" key={tag.identifier}>
-        <a href={ref}> {tag.title} </a>
+        <a href={ref}> {tag.data} </a>
       </div>
     );
   }, '<div></div>');

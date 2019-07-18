@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ResultsList from './ResultsList';
 
 import SearchListItem from '../SearchListItem';
 
-class SearchList extends Component {
+const SearchList = ({items, message}) => {
 
-  render() {
-    const { items, message } = this.props;
     return (
       <React.Fragment>
         <div className="results-message">{ message }</div>
         <ResultsList items={items} className="search-list" component={SearchListItem} />
       </React.Fragment>
-    )
-  }
+    );
 
 }
 

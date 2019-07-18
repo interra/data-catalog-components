@@ -8,19 +8,19 @@
     "modified": "2019-01-26T20:16:07",
     "keyword": [
         {
-            "title": "Open Data",
+            "data": "Open Data",
             "identifier": "opendata"
         },
         {
-            "title": "Transparency",
+            "data": "Transparency",
             "identifier": "transparency"
         },
         {
-            "title": "Collaboration",
+            "data": "Collaboration",
             "identifier": "collaboration"
         },
         {
-            "title": "Case Study",
+            "data": "Case Study",
             "identifier": "casestudy"
         }
     ],
@@ -43,17 +43,21 @@
     ],
     "distribution": [
         {
-            "downloadURL": "https://data.example.gov/fake/file.csv",
-            "mediaType": "text/csv",
-            "title": "csv",
-            "format": "csv",
-            "identifier": "23ew-n7w9-csv"
+            "identifier": "23ew-n7w9-csv",
+            "data": {
+                "downloadURL": "https://data.example.gov/fake/file.csv",
+                "mediaType": "text/csv",
+                "title": "csv",
+                "format": "csv"
+            }
         },
         {
-            "downloadURL": "https://data.example.gov/fake/file.pdf",
-            "title": "Special Report",
-            "format": "pdf",
-            "identifier": "23ew-n7w9-pdf"
+            "identifier": "23ew-n7w9-pdf",
+            "data": {
+                "downloadURL": "https://data.example.gov/fake/file.pdf",
+                "title": "Special Report",
+                "format": "pdf"
+            }
         }
     ],
     "theme": [

@@ -6,18 +6,8 @@ const Wrapper = styled.div`
 
   h1 {
     position: relative;
-    padding-bottom: 15px;
     font-size: 40px;
     line-height: 46px;
-    &::after {
-      content: '';
-      width: 50px;
-      height: 5px;
-      background-color: ${props => props.theme.secondaryDark};
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
   }
   
 `;

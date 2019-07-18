@@ -26,7 +26,7 @@ export default class NavBar extends React.Component {
   render() {
     return (
 
-        <Wrapper className="main-navigation">
+        <Wrapper className="container-fluid main-navigation">
           <Navbar expand="md navbar-dark">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>

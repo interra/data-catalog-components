@@ -14,6 +14,9 @@ const StyledLink = styled.a`
   min-width: 260px;
   text-decoration: none;
   text-align: center;
+  svg path {
+    fill: ${props => props.theme.linkColor};
+  }
   &.active,
   &:hover {
     background-color: ${props => props.theme.secondaryLight};

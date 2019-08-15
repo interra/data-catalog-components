@@ -9,12 +9,12 @@ class IconListItem extends React.PureComponent {
     const color =  "#0A77BD";
     let content = '';;
 
-    if (item.icon && item.none) {
+    if (item.icon) {
       // Image provided as a url.
       content = (
         <StyledLink href={item.ref}>
           <img src={item.icon} alt={item.alt} />
-          <div>{item.data}</div>
+          <div>{item.title}</div>
         </StyledLink>
       )
     }

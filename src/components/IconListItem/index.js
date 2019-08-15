@@ -22,8 +22,8 @@ class IconListItem extends React.PureComponent {
       // Image provided by custom component.
       content = ( 
         <StyledLink href={item.ref}>
-          <TopicImage title={item.data} width="80" height="80" fill={color} alt={item.data}  width="80" height="80" />
-          <div>{item.data}</div>
+          <TopicImage title={item.title} width="80" height="80" alt={item.title} />
+          <div>{item.title}</div>
         </StyledLink>
       )
     };

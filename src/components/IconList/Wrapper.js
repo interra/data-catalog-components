@@ -5,9 +5,8 @@ const Wrapper = styled.div`
   padding-bottom: 24px;
   h2 {
     display: block;
-    font-size: 20px !important;
-    margin-bottom: 24px;
     text-align: center;
+    margin: 2rem 0;
   }
   ul {
     list-style:none;

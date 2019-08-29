@@ -16,7 +16,7 @@
     "storybook": "NODE_PATH=src start-storybook -p 6006",
     "deploy-storybook": "storybook-to-ghpages",
     "lint": "eslint ./src",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "keywords": [
     "react",
@@ -58,7 +58,9 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.0.11",
     "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-links": "^5.0.0",
     "@storybook/addons": "^5.0.0",
     "@storybook/react": "^5.0.0",

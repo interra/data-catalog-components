@@ -1,26 +1,50 @@
-/* eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import { Parser } from "html-to-react";
 
-import { Parser } from 'html-to-react';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  body div.dataset-body {
-    clear: both;
-  }
-`;
-
-function Text(props) {
-  const label = (props.label && props.label.length > 0) ? <strong>{props.label}:</strong> : '';
+const Text = ({ label, value, children, wrapper }) => {
   const parser = new Parser();
-  const text = props.value ?  parser.parse(props.value) : '';
+  const { tag, classes } = wrapper;
+  const TextWrapper = () => {
+    if (tag) {
+      const TagElement = `${tag}`;
+      return (
+        <TagElement className={classes}>
+          {label && <strong>{`${label}: `}</strong>}
+          {value ? parser.parse(value) : children}
+        </TagElement>
+      );
+    }
+    return (
+      <>
+        {label && <strong>{`${label}: `}</strong>}
+        {value ? parser.parse(value) : children}
+      </>
+    );
+  };
+  return <TextWrapper />;
+};
 
-  return (
-    <>
-      {label} {text}
-    </>
-  );
-}
+Text.defaultProps = {
+  label: ``,
+  value: ``,
+  children: ``,
+  wrapper: {}
+};
+
+Text.propTypes = {
+  // Text in strong tag followed by semi colon.
+  label: PropTypes.string,
+  // The content of the Text component after the label.
+  // Will be required in future versions.
+  children: PropTypes.node,
+  // If classes are added, will wrap text in div with classes.
+  wrapper: PropTypes.shape({
+    tag: PropTypes.string,
+    classes: PropTypes.string
+  }),
+  // Deprecated way to pass markup to the Text component.
+  value: PropTypes.string
+};
 
 export default Text;

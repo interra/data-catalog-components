@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export { default as Blocks } from "./components/Blocks";
 export { default as BasicBlock } from "./components/Blocks/BasicBlock";
 export { default as Copyright } from "./components/Copyright";

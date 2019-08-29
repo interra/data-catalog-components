@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding-top: 24px;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     margin: 2rem 0;
   }
   ul {
-    list-style:none;
+    list-style: none;
     display: flex;
     align-items: stretch;
     align-content: flex-start;

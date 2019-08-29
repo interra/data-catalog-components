@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { css } from "styled-components";
 
 const ButtonStyles = css`

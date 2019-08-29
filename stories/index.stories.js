@@ -39,9 +39,9 @@ import links from './_menu.json';
 
 storiesOf('General', module)
     .add('Logo', () => <Logo />)
-    .add('Header', () => <Header site="Open Data Catalog" slogan="Place your tag line here." />)
+    .add('Header', () => <Header site="Open Data Catalog" slogan="Place your tag line here." navItems={links.main.map((item) => (<a href={item.url}>{item.label}</a>))} />)
     .add('Page Heading', () => <PageHeader title="Datasets" />)
-    .add('NavBar', () => <NavBar />)
+    .add('NavBar', () => <NavBar navItems={links.main.map((item) => (<a href={item.url}>{item.label}</a>))}/>)
     .add('Button', () => <StyledButton color="primary">primary</StyledButton>)
     .add('Preview Button', () => <StyledButton color="primary"><FontAwesomeIcon icon="chart-bar" fill="#ffffff"/> Preview</StyledButton>)
     .add('Download Button', () => <StyledButton color="primary"><FontAwesomeIcon icon="download" fill="#ffffff"/> Download</StyledButton>)

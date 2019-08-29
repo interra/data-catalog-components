@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
-
   position: relative;
   background-size: cover;
   background-position: 50% 50%;
@@ -34,10 +33,10 @@ const Wrapper = styled.div`
     margin-top: 0;
   }
   .btn-hero a {
-    color: ${props => props.theme.primaryDark};
+    color: ${(props) => props.theme.primaryDark};
     &:hover,
     &:focus {
-      color: ${props => props.theme.primaryDark};
+      color: ${(props) => props.theme.primaryDark};
       text-decoration: none;
     }
   }

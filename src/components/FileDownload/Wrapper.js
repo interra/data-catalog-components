@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   clear: both;
@@ -24,4 +24,3 @@ const Wrapper = styled.div`
 `;
 
 export default Wrapper;
-

@@ -14,8 +14,8 @@ const Wrapper = styled.div`
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     h2,h3,h4 {
       color: ${props => props.theme.footerText};

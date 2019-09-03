@@ -1,16 +1,21 @@
-/* eslint-disable */
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-class Title extends Component {
+const Title = ({ headerLevel, title, classes }) => {
+  const HeaderLevel = `${headerLevel}`;
+  return <HeaderLevel className={classes}>{title}</HeaderLevel>;
+};
 
-    render() {
+Title.defaultProps = {
+  headerLevel: `h1`
+};
 
-        let title = this.props.title
-
-        return (
-            <h1>{title}</h1>
-        );
-    }
-}
+Title.propTypes = {
+  // Defaults to h1, but any level can be passed to the component.
+  headerLevel: PropTypes.oneOf([`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]),
+  // The text used in the header.
+  title: PropTypes.string.isRequired,
+  classes: PropTypes.string
+};
 
 export default Title;

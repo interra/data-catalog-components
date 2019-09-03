@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text, select } from "@storybook/addon-knobs";
+import { withA11y } from '@storybook/addon-a11y';
 
 import IconList from '../src/components/IconList';
 import IconListItem from '../src/components/IconListItem'
@@ -86,15 +88,38 @@ storiesOf('Footer', module)
     .add('Footer', () => <Footer links={links} />)
 
 storiesOf('Dataset', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withA11y)
   .add('Format Icon', () => <FormatIcon />)
   .add('File Download', () => <FileDownload label="Label" resource={data.distribution[0]} />)
   .add('File Download - No label', () => <FileDownload resource={data.distribution[0]} />)
   .add('Organization', () => <Organization name={data.publisher.name} description={data.publisher.description} identifier={data.publisher.identifier} />)
   .add('String', () => <String label={"I am a label"} value={"I am a string."} />)
   .add('String - No label', () => <String value={"I am a string."} />)
-  .add('Text', () => <Text label={"I am a label"} value={"<u>I am an underlined string.</u>"} />)
-  .add('Text - No label', () => <Text value={"<u>I am an underlined string.</u>"} />)
-  .add('Title', () => <Title title={"I am a title"} />)
+  .add(
+    "Text",
+    () => (
+      <Text
+        wrapper={{ tag: text("Tag", ""), classes: text("Classes", "") }}
+        label={text("Label", "I am a label")}
+        value={text("Value", "<u>I am an underlined string.</u>")}
+      >
+        {text("Children", "")}
+      </Text>
+    ),
+    { knobs: { escapeHTML: false } }
+  )
+  .add("Title", () => (
+    <Title
+      title={text("Title", "I am a title")}
+      headerLevel={select(
+        "Header Level",
+        ["h1", "h2", "h3", "h4", "h5", "h6"],
+        "h1"
+      )}
+      classes={text("Classes", "")}
+    />
+  ))
   .add('Table 1', () => <Table configuration={tables.config1} data={tables.data1} title="Additional Information" th1="Field" th2="Value" tableclass="table-one" />)
   .add('Table 2', () => <Table configuration={tables.config2} data={tables.data2} title="What's in this Dataset?" th1="Rows" th2="Columns" tableclass="table-two" />)
   .add('Table 3', () => <Table configuration={tables.config3} data={tables.data3} title="Columns in this Dataset" th1="Column Name" th2="Type" tableclass="table-three" />)

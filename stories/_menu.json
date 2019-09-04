@@ -2,15 +2,28 @@
   "main": [
     {
       "label": "Home",
-      "url": "/"
+      "url": "/",
+      "target": "_top"
+    },
+    {
+      "label": "Datasets",
+      "url": "/search",
+      "target": "_top"
+    },
+    {
+      "label": "Publishers",
+      "url": "/groups",
+      "target": "_top"
     },
     {
       "label": "About",
-      "url": "/about"
+      "url": "/about",
+      "target": "_top"
     },
     {
-      "label": "Search",
-      "url": "/search"
+      "label": "API",
+      "url": "/docs",
+      "target": "_top"
     }
   ],
   "footer1": [

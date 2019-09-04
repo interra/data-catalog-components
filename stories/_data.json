@@ -44,20 +44,16 @@
     "distribution": [
         {
             "identifier": "23ew-n7w9-csv",
-            "data": {
-                "downloadURL": "https://data.example.gov/fake/file.csv",
-                "mediaType": "text/csv",
-                "title": "csv",
-                "format": "csv"
-            }
+            "downloadURL": "https://data.example.gov/fake/file.csv",
+            "mediaType": "text/csv",
+            "title": "csv",
+            "format": "csv"
         },
         {
             "identifier": "23ew-n7w9-pdf",
-            "data": {
-                "downloadURL": "https://data.example.gov/fake/file.pdf",
-                "title": "Special Report",
-                "format": "pdf"
-            }
+            "downloadURL": "https://data.example.gov/fake/file.pdf",
+            "title": "Special Report",
+            "format": "pdf"
         }
     ],
     "theme": [

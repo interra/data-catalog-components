@@ -8,22 +8,22 @@ import FormatIcon from '../FormatIcon';
 function FileDownload(props) {
 
   const { label, resource } = props;
-  let format = resource.data.format.toUpperCase();
+  let format = resource.format.toUpperCase();
 
   const item =
     <div className="resource">
       <FormatIcon format={format} />
-      <a href={resource.data.downloadURL} title={resource.data.format}>
+      <a href={resource.downloadURL} title={resource.format}>
         <span
           data-toggle='tooltip'
           data-placement='top'
-          data-original-title={resource.data.format}
-          data-format={resource.data.format}
+          data-original-title={resource.format}
+          data-format={resource.format}
           className='format-label'
           >
-            {resource.data.format}
+            {resource.format}
           </span>
-          {resource.data.title}
+          {resource.title}
       </a>
     </div>
     

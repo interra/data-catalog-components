@@ -7,7 +7,9 @@ import Wrapper from './Wrapper';
 function IconList(props) {
   const ComponentToRender = props.component;
   let content = (<div></div>);
-  const className = props.className;
+  let styles = {
+    textAlign: props.titleAlign
+  };
 
   // If we have items, render them
   if (props.items) {
@@ -21,9 +23,9 @@ function IconList(props) {
 
   if (props.paneTitle) {
     return (
-      <Wrapper className="container-fluid icon-container">
-        <h2 className="pane-title">{ props.paneTitle }</h2>
-        <ul className={ className }>
+      <Wrapper className={ props.containerClass }>
+        <h2 className="pane-title" style={styles}>{ props.paneTitle }</h2>
+        <ul className={ props.listClass }>
           {content}
         </ul>
       </Wrapper>
@@ -31,8 +33,8 @@ function IconList(props) {
   }
   else {
     return (
-      <Wrapper className="container-fluid icon-container">
-        <ul className={ className }>
+      <Wrapper className={ props.containerClass }>
+        <ul className={ props.listClass }>
           {content}
         </ul>
       </Wrapper>
@@ -49,8 +51,10 @@ IconList.defaultProps = {
 IconList.propTypes = {
   component: PropTypes.func.isRequired,
   items: PropTypes.array,
-  className: PropTypes.string,
-  paneTitle: PropTypes.string
+  listClass: PropTypes.string,
+  containerClass: PropTypes.string,
+  paneTitle: PropTypes.string,
+  titleAlign: PropTypes.string
 };
 
 export default IconList;

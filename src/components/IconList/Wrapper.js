@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
   h2 {
     display: block;
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 15px;
   }
   ul {
     list-style: none;

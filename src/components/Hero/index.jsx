@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 import defaultTheme from '../../theme/default'
